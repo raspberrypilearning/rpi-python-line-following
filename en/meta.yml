@@ -1,0 +1,20 @@
+title: rpi-python-line-following
+hero_image: images/banner.png
+description: rpi-python-line-following description
+theme: red # possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+duration: 2 # possible values: 1, 2 or 3
+version: 4
+listed: false
+ingredient: false
+copyedit: false
+last_tested: "2018-04-10"
+curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+interests: "animals, big-project, music, literature, space, cybersecurity-and-cryptography, humour, weather, photography, art, games, robotics, wearable-technology"
+technologies: "electronic-components, sonic-pi, sense-hat, raspberry-pi, pi-camera, blender, scratch, html-css-javascript, python, microbit"
+hardware: "electronic-components, sense-hat, raspberry-pi, pi-camera, microbit"
+software: "sonic-pi, blender, scratch, html-css-javascript, python"
+site_areas:
+steps:
+  - title: Introduction
+  - title: What you will need
+  - title: Step title
