@@ -4,13 +4,9 @@ Add project description here. What will learners be making?
 
 ### What you will make
 
-Add something here to showcase here, for example:
+In this reosurce, you will turn your buggy into a line-following buggy.
 
-<div class="scratch-preview">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/160619869/?autostart=false" frameborder="0"></iframe>
-</div>
-
-Add instructions here. These should explain either how the finished project will work, or explain how to interact with the content above.
+![final](images/final.gif)
 
 ### What you will learn
 
