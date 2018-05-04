@@ -1,9 +1,9 @@
 ## Programming a line following algorithm
 
-**In this example the motor controller board is connected so that the left motor is on pins `7` and `8` and the righ motor is on pins `9` and `10`. The left line sensor is on pin `17` and the right line sensor is on pin `17`**
+**In this example the motor controller board is connected so that the left motor is on pins `7` and `8` and the right motor is on pins `9` and `10`. The left line sensor is on pin `17` and the right line sensor is on pin `17`**
 
 --- task ---
-Open up you prefered text editor or IDE on your Raspberry Pi, and begin by setting up your motor controller board and your sensors, using `gpiozero`
+Open up you preferred text editor or IDE on your Raspberry Pi, and begin by setting up your motor controller board and your sensors, using `gpiozero`
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -16,7 +16,7 @@ right_sensor= LineSensor(27)
 ```
 --- /task ---
 
-to begin with you can write a really simple line following algorithm, just to test yhat your robot is working.
+to begin with you can write a really simple line following algorithm, just to test what your robot is working.
 
 The `gpiozero` module can call a function depending on whether or not a line has been detected. For example:
 
@@ -25,10 +25,10 @@ left_sensor.when_no_line = function_name_to_call
 ```
 
 This will tell the robot to do something when the `left_sensor` detects that it is not above a line.
-So bby telling the robot to go forward when no line has been detected, but to turn if a line is detected, you can produce very basic line following behaviour.
+So by telling the robot to go forward when no line has been detected, but to turn if a line is detected, you can produce very basic line following behavior.
 
 --- task ---
-Add our lines of code to your robot, to produce a basic line following algorith.
+Add our lines of code to your robot, to produce a basic line following algorithm.
 
 --- /task ---
 
@@ -43,7 +43,7 @@ The syntax used here is as follows for the first line
 ```python
 left_sensor.when_line = robot.left
 ```
-Now try to complete the remianin three lines
+Now try to complete the remaining three lines
 --- /hint --- --- hint ---
 Here are the four lines of code you need. If you're running your code from the terminal, you'll need to add `pause()` at the end as well.
 
@@ -57,6 +57,6 @@ pause()
 ```
 --- /hint --- --- /hints ---
 
-Don't worry if you're robot runs off it's line a bit. Just observe if it attempts to stay on the line. Here's an example of a robot running on a basic track with this algortihm.
+Don't worry if you're robot runs off it's line a bit. Just observe if it attempts to stay on the line. Here's an example of a robot running on a basic track with this algorithm.
 
 ![final](images/final.gif)

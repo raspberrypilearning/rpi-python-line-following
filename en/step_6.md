@@ -3,12 +3,12 @@
 While the previous algorithm might have sufficed, it can easily be improved upon. Let's see what a better algorithm might look like.
 
 When a line sensor is above a line it outputs a `1` and when it's off a line it outputs a `0`.
-For the robot, when it receives a `1` to the right motor for instance, it drives the motor foward. When it receives a `-1` it dirves the motor backwards.
+For the robot, when it receives a `1` to the right motor for instance, it drives the motor forward. When it receives a `-1` it drives the motor backwards.
 
 Let's have a look at the positions of the robot, the states of the lines sensors and the actions required of the motors.
 
 1. The robot is perfectly on the line and should drive forwards
-   - Both line sensors are off the line and outputing a `0`
+   - Both line sensors are off the line and outputting a `0`
    - Both motors drive forwards and so should receive `1`
 2. The robot has drifted left and should turn right
    - The right sensor is on the line and outputting a `1`
@@ -16,10 +16,10 @@ Let's have a look at the positions of the robot, the states of the lines sensors
    - The left motor should receive a `-1`
    - The right motor should receive a `1`
 3. The robot has drifted right and should turn left
-   - The right sensor is off the line and outpputing a `0`
+   - The right sensor is off the line and outputting a `0`
    - The left sensor is on the line and outputting a `1`
-   - The lefft mtot should receive a `1`
-   - The right motio shourl receive a `-1`
+   - The Left motor should receive a `1`
+   - The right motor should receive a `-1`
    
 How can this be achieved? First of all you can create an infinite loop to view the sensor values.
 
@@ -42,14 +42,14 @@ while True:
 Now move the robot back and forth over the line to see what happens.
 --- /task ---
 
-Hopefully you should see the bianry output from the sensors.
+Hopefully you should see the binary output from the sensors.
 
 ![sensor_output](images/sensor_output.gif)
 
 So now you have the sensor output, it needs to be altered a little before it can be sent to the motors. As per the algorithm above:
-- If both sensors read `0`, then both motors recieve 1
+- If both sensors read `0`, then both motors receive 1
 - If the right sensor reads `1` then the left motor should receive `-1`
-- If the left sensor reads `1` then the right motot should receive `-1`
+- If the left sensor reads `1` then the right motor should receive `-1`
 
 --- task ---
 

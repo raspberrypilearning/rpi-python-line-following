@@ -1,6 +1,6 @@
 ## Introduction
 
-In this reosurce, you will turn your buggy into a line-following buggy, enabling it to whiz around a track with ease. Make sure you have already completed the [Build a Buggy](https://projects.raspberrypi.org/en/projects/build-a-buggy) resource, or that you have a working buggy, before attempting this project.
+In this resource, you will turn your buggy into a line-following buggy, enabling it to whiz around a track with ease. Make sure you have already completed the [Build a Buggy](https://projects.raspberrypi.org/en/projects/build-a-buggy) resource, or that you have a working buggy, before attempting this project.
 
 <video width="640" height="360" controls>
 <source src="images/showcase.webm" type="video/webm">

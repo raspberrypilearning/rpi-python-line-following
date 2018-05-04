@@ -34,7 +34,7 @@ robot.source = motor_speed()
 ```
 --- /task ---
 
-To make sure that the robot doesn't keep running forever, and to close all the componenets connections cleanly, you can optonally add in these lines aswell.
+To make sure that the robot doesn't keep running forever, and to close all the components connections cleanly, you can optionally add in these lines as well.
 
 ```python
 sleep(60)
@@ -49,7 +49,7 @@ right_sensor.close()
 Now run your code and test your robot over a track.
 --- /task ---
 
-Sometimes the robot runs a little too fast, so you can tweek your code a little as shown in this completed script. This adds in a speed multiplier, to slow the robot down a little.
+Sometimes the robot runs a little too fast, so you can tweak your code a little as shown in this completed script. This adds in a speed multiplier, to slow the robot down a little.
 
 ```python
 from gpiozero import Robot, LineSensor

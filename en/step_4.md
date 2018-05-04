@@ -12,7 +12,7 @@ When the sensors pass over a dark line, the LED on the sensor board should turn 
 ![tune](images/tune.gif)
 
 --- task ---
-Use the small potentiometer on the board, to tune your sensors, so that the LEDs turns off when over a dark line, and lights up when over whitespace.
+Use the small potentiometer on the board, to tune your sensors, so that the LEDs turns off when over a dark line, and lights up when over white-space.
 
 ![tune](images/tune.jpg)
 --- /task ---
