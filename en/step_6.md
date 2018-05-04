@@ -50,10 +50,11 @@ So now you have the sensor output, it needs to be altered a little before it can
 - If both sensors read `0`, then both motors recieve 1
 - If the right sensor reads `1` then the left motor should receive `-1`
 - If the left sensor reads `1` then the right motot should receive `-1`
-n
+
 --- task ---
 
 Within the loop you have, create two new variables called `left_mot` and `right_mot`. These variables should be the same as what you would like the motors to receive. You can simply print out their values within the loop.
+--- /task ---
 
 --- hints --- --- hint ---
 According to the above algorithm `if left_detect == 0 and right_detect == 0:` what do you want the values of `left_mot` and `right_mot` to be?
@@ -86,7 +87,6 @@ while True:
 
 	print(right_mot, left_mot)
 --- /hint --- --- /hints ---
---- /task ---
 
 --- task ---
 When you are complete, run your code and test how it works when you move the robot over the line

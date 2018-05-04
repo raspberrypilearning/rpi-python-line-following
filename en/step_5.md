@@ -29,6 +29,9 @@ So bby telling the robot to go forward when no line has been detected, but to tu
 
 --- task ---
 Add our lines of code to your robot, to produce a basic line following algorith.
+
+--- /task ---
+
 --- hints --- --- hint ---
 Each line should perform the following tasks:
 1. If there's a line under the left sensor - turn left
@@ -53,7 +56,6 @@ right_sensor.when_no_line = robot.forward
 pause()
 ```
 --- /hint --- --- /hints ---
---- /task ---
 
 Don't worry if you're robot runs off it's line a bit. Just observe if it attempts to stay on the line. Here's an example of a robot running on a basic track with this algortihm.
 

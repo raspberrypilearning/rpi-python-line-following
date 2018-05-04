@@ -7,16 +7,17 @@ Each line sensor has three pins. These are `VCC` for power, `GND` for ground, an
 --- task ---
 Take one of your soldered three wire jumper combinations, and connect two of the ends to the `VCC` pins on each of the line sensors
 
-![power](imgaes/power.jpg)
+![power](images/power.jpg)
 --- /task ---
 
 --- task ---
 Take the second of your soldered jumper leads and connect two ends to the `GND` pins on the line sensors.
+![ground](images/ground.jpg)
 --- /task ---
 
 --- task ---
 Take your remaining two jumper leads and connect each one to the `DO` pins on the lines sensors
-![digital out](images/digital_out.jpg)I
+![digital out](images/digital_out.jpg)
 --- /task ---
 
 --- task ---
