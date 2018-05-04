@@ -54,3 +54,7 @@ pause()
 ```
 --- /hint --- --- /hints ---
 --- /task ---
+
+Don't worry if you're robot runs off it's line a bit. Just observe if it attempts to stay on the line. Here's an example of a robot running on a basic track with this algortihm.
+
+![final](images/final.gif)

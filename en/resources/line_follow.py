@@ -5,26 +5,25 @@ robot = Robot(left=(7, 8), right=(9, 10))
 left_sensor = LineSensor(17)
 right_sensor= LineSensor(27)
 
+speed = 0.65
 
 def motor_speed():
     while True:
-        l = int(left_sensor.value)
-        r = int(right_sensor.value)
+        left_detect  = int(left_sensor.value)
+        right_detect = int(right_sensor.value)
         ## Stage 1
-        if l == 0 and r == 0:
-            l = 1
-            r = 1
+        if left_detect == 0 and right_detect == 0:
+            left_mot = 1
+            right_mot = 1
         ## Stage 2
-        if l == 0 and r == 1:
-            l = -1
-        if l == 1 and r == 0:
-            r = -1
+        if left_detect == 0 and right_detect == 1:
+            left_mot = -1
+        if left_detect == 1 and right_detect == 0:
+            right_mot = -1
         #print(r, l)
-        yield (r * 0.65, l * 0.65)
+        yield (right_mot * speed, left_mot * speed)
 
 robot.source = motor_speed()
-#print("hi")
-# #motor_speed()
 
 sleep(60)
 robot.stop()
