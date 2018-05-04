@@ -1,5 +1,4 @@
 from gpiozero import Robot, LineSensor
-from signal import pause
 from time import sleep
 
 robot = Robot(left=(7, 8), right=(9, 10)) 
