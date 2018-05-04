@@ -1,19 +1,19 @@
-title: rpi-python-line-following
+title: Build a line follower
 hero_image: images/banner.png
 description: rpi-python-line-following description
 theme: red # possible values: blue, green, navy, orange, red, turquoise, violet, yellow
-duration: 2 # possible values: 1, 2 or 3
+duration: 3
 version: 4
 listed: false
 ingredient: false
 copyedit: false
 last_tested: "2018-04-10"
-curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
-interests: "animals, big-project, music, literature, space, cybersecurity-and-cryptography, humour, weather, photography, art, games, robotics, wearable-technology"
-technologies: "electronic-components, sonic-pi, sense-hat, raspberry-pi, pi-camera, blender, scratch, html-css-javascript, python, microbit"
-hardware: "electronic-components, sense-hat, raspberry-pi, pi-camera, microbit"
-software: "sonic-pi, blender, scratch, html-css-javascript, python"
-site_areas:
+curriculum: 3, design-0, programming-3, phys-comp-3, manufacture-2, community-0
+interests: "robotics"
+technologies: "electronic-components, raspberry-pi, python"
+hardware: "electronic-components, raspberry-pi"
+software: "python"
+site_areas: projects
 steps:
   - title: Introduction
   - title: Preparing the connectors
