@@ -7,6 +7,22 @@ In this reosurce, you will turn your buggy into a line-following buggy, enabling
 Your browser does not support WebM video, try FireFox or Chrome
 </video>
 
+
+--- collapse ---
+---
+title: What you will need
+image: images/image
+---
+In addition to your Raspberry Pi buggy, you will need:
+
+- 8 female-female jumper leads
+- 2 Line following sensors.
+
+![components](images/components.jpg)
+You can purchase the line following sensors used in this project by viewing the [buggy shopping list](https://my.aliexpress.com/wishlist/wish_list_product_list.htm?spm=a2g0s.8937460.0.0.EKSrsx&currentGroupId=100000000943756), although any line sensors can be used.
+--- /collapse ---
+
+
 --- collapse ---
 ---
 title: What you will learn
@@ -17,6 +33,7 @@ This project covers elements from the following strands of the [Raspberry Pi Dig
 + [Process input data to monitor or react to the environment](https://curriculum.raspberrypi.org/physical-computing/developer/)
 + [Use basic materials and tools to create project prototypes](https://curriculum.raspberrypi.org/manufacture/creator/)
 --- /collapse ---
+
 
 --- collapse ---
 ---
