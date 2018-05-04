@@ -28,7 +28,7 @@ This will tell the robot to do something when the `left_sensor` detects that it 
 So by telling the robot to go forward when no line has been detected, but to turn if a line is detected, you can produce very basic line following behavior.
 
 --- task ---
-Add our lines of code to your robot, to produce a basic line following algorithm.
+Add four lines of code to your robot, to produce a basic line following algorithm.
 
 --- /task ---
 
