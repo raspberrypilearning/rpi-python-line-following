@@ -16,5 +16,10 @@ software: "sonic-pi, blender, scratch, html-css-javascript, python"
 site_areas:
 steps:
   - title: Introduction
-  - title: What you will need
-  - title: Step title
+  - title: Preparing the connectors
+  - title: Connecting the line sensors
+  - title: Test the lines sensors
+  - title: Programming a line following algorithm
+  - title: Planning a better algorithm
+  - title: The final algorithm
+  

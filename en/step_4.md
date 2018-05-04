@@ -1,4 +1,4 @@
-# Test the lines sensors
+## Test the lines sensors
 
 Next you're going to test that your line sensors are working and tune them a little.
 
