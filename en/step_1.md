@@ -1,10 +1,10 @@
 ## Introduction
 
-In this resource, you will turn your buggy into a line-following buggy, enabling it to whiz around a track with ease. Make sure you have already completed the [Build a Buggy](https://projects.raspberrypi.org/en/projects/build-a-buggy) resource, or that you have a working buggy, before attempting this project.
+In this resource, you will turn your robot buggy into a line-following robot buggy so it can whiz around a track with ease. Make sure you have already completed the [Build a buggy](https://projects.raspberrypi.org/en/projects/build-a-buggy) resource, or that you have a working buggy, before attempting this project.
 
 <video width="640" height="360" controls>
 <source src="images/showcase.webm" type="video/webm">
-Your browser does not support WebM video, try FireFox or Chrome
+Your browser does not support WebM video, so try FireFox or Chrome.
 </video>
 
 
@@ -16,12 +16,12 @@ image: images/image
 In addition to your Raspberry Pi buggy, you will need:
 
 - 8 female-female jumper leads
-- 2 Line following sensors
+- 2 line following sensors
 - Soldering iron and solder
 - Insulating tape
 
 ![components](images/components.jpg)
-You can purchase the line following sensors used in this project by viewing the [buggy shopping list](https://my.aliexpress.com/wishlist/wish_list_product_list.htm?spm=a2g0s.8937460.0.0.EKSrsx&currentGroupId=100000000943756){:target="_blank"}, although any line sensors can be used.
+You can purchase the line following sensors used in this project via this [buggy shopping list](https://my.aliexpress.com/wishlist/wish_list_product_list.htm?spm=a2g0s.8937460.0.0.EKSrsx&currentGroupId=100000000943756){:target="_blank"}, although any line sensors will work here.
 --- /collapse ---
 
 
