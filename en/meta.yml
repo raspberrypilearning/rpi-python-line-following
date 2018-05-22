@@ -1,6 +1,6 @@
-title: Build a line follower
+title: Build a line-following robot
 hero_image: images/banner.png
-description: rpi-python-line-following description
+description: Make your robot buggy follow a track by itself
 theme: red # possible values: blue, green, navy, orange, red, turquoise, violet, yellow
 duration: 3
 version: 4
@@ -16,10 +16,10 @@ software: "python"
 site_areas: projects
 steps:
   - title: Introduction
-  - title: Preparing the connectors
-  - title: Connecting the line sensors
+  - title: Prepare the connectors
+  - title: Connect the line sensors
   - title: Test the lines sensors
-  - title: Programming a line following algorithm
-  - title: Planning a better algorithm
+  - title: Program a line following algorithm
+  - title: Plan a better algorithm
   - title: The final algorithm
   
