@@ -4,7 +4,7 @@ The previous algorithm might be OK, it can easily be improved upon. Let's see wh
 
 When a line sensor is above a line, it outputs a `1`. When it's off a line, it outputs a `0`.
 
-The robot, whenever it receives a `1` signal to the right motor, it drives that motor forwards. When it receives a `-1`, it drives the motor backwards.
+The motors work slightly differently though: the robot, whenever it receives a `1` signal to the right motor, drives that motor forwards. When it receives a `-1`, it drives the motor backwards.
 
 Let's have a look at an algorithm that takes into account the position of the robot, the states of the lines sensors, and the actions required of the motors.
 
