@@ -1,4 +1,4 @@
-## Planning a better algorithm
+## write a better algorithm
 
 The previous algorithm might be OK, it can easily be improved upon. Let's see what a better algorithm might look like!
 
