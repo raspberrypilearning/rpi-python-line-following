@@ -2,8 +2,10 @@
 
 In this resource, you will turn your robot buggy into a line-following robot buggy so it can whiz around a track with ease. Make sure you have already completed the [Build a buggy](https://projects.raspberrypi.org/en/projects/build-a-buggy) resource, or that you have a working buggy, before attempting this project.
 
-<stream id="6a20279dbfe23651cfe17ebe616b87b7" loop></stream>
-<script data-cfasync="false" defer type="text/javascript" src="https://embed.cloudflarestream.com/embed/we4g.fla9.latest.js?video=6a20279dbfe23651cfe17ebe616b87b7"></script>
+<video width="640" height="360" controls>
+<source src="images/https://watch.cloudflarestream.com/6a20279dbfe23651cfe17ebe616b87b7">
+</video>
+
 
 --- collapse ---
 ---
