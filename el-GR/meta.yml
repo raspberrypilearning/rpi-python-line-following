@@ -1,7 +1,7 @@
 ---
-title: Build a line-following robot
+title: Δημιούργησε ένα ρομπότ που ακολουθεί μια γραμμή
 hero_image: images/banner.png
-description: Make your robot buggy follow a track by itself
+description: Κάνε το ρομπότ "buggy" σου να ακολουθεί μία διαδρομή από μόνο του
 theme: red
 duration: 3
 version: 4
