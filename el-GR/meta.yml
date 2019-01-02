@@ -17,16 +17,16 @@ software: "python"
 site_areas: projects
 steps:
   - 
-    title: Introduction
+    title: Εισαγωγή
   - 
-    title: Prepare the connectors
+    title: Ετοίμασε τις συνδέσεις
   - 
-    title: Connect the line sensors
+    title: Σύνδεσε τους αισθητήρες γραμμής
   - 
-    title: Test the lines sensors
+    title: Έλεγξε τους αισθητήρες γραμμής
   - 
-    title: Program a line following algorithm
+    title: Γράψε έναν αλγόριθμο για να ακολουθεί το ρομπότ τη γραμμή
   - 
-    title: Plan a better algorithm
+    title: Σχεδίασε έναν καλύτερο αλγόριθμο
   - 
-    title: The final algorithm
+    title: Ο τελικός αλγόριθμος
