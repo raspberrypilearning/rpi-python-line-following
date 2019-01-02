@@ -1,6 +1,6 @@
-## Introduction
+## Εισαγωγή
 
-In this resource, you will turn your robot buggy into a line-following robot buggy so it can whiz around a track with ease. Make sure you have already completed the [Build a buggy](https://projects.raspberrypi.org/en/projects/build-a-buggy) resource, or that you have a working buggy, before attempting this project.
+Σε αυτή την ενότητα, θα μετατρέψεις το ρομπότ buggy σου σε ένα ρομπότ που ακολουθεί μια γραμμή, ώστε να μπορεί να περιφέρεται σε μία διαδρομή με ευκολία. Make sure you have already completed the [Build a buggy](https://projects.raspberrypi.org/en/projects/build-a-buggy) resource, or that you have a working buggy, before attempting this project.
 
 <stream class="cloudflare-video" id="6a20279dbfe23651cfe17ebe616b87b7" loop></stream>
 
