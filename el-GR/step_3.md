@@ -1,4 +1,4 @@
-## Connect the line sensors
+## Σύνδεσε τους αισθητήρες γραμμής
 
 Each line sensor has three pins: **VCC** for power, **GND** for ground, and **DO** for digital out.
 
