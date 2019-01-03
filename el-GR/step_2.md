@@ -1,6 +1,6 @@
-## Prepare the connectors
+## Ετοίμασε τις συνδέσεις
 
-Your first step will be to connect your line sensors to your buggy. Normally, the type of line sensor used in this project needs to be connected to a **3V3** pin, but you're going to run two sensors via the same power pin, so you'll attach both of them to a **5V** pin.
+Το πρώτο σου βήμα θα είναι να συνδέσεις τους αισθητήρες γραμμής σου με το buggy σου. Κανονικά, ο τύπος αισθητήρα γραμμής που χρησιμοποιείται σε αυτό το έργο πρέπει να συνδεθεί με ένα **3V3** pin, αλλά πρόκειται να τρέξεις δύο αισθητήρες μέσω του ίδιου pin τροφοδοσίας, οπότε θα συνδέσεις και τους δύο σε ένα **5V** pin.
 
 First, you're going to prepare your leads!
 
