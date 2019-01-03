@@ -1,15 +1,15 @@
 ## Σύνδεσε τους αισθητήρες γραμμής
 
-Each line sensor has three pins: **VCC** for power, **GND** for ground, and **DO** for digital out.
+Κάθε αισθητήρας γραμμής έχει τρια pins: **VCC** για ρεύμα, **GND** για τη γείωση και **DO** για ψηφιακή έξοδο.
 
-![line sensor](images/sensor.jpg)
+![αισθητήρας γραμμής](images/sensor.jpg)
 
-\--- task \--- Take one of your soldered-together three-wire jumper leads, and connect two of its ends to the **VCC** pin on each of the two sensors.
+\--- task \--- Πάρε έναν από τους συγκολλημένους αγωγούς σου και σύνδεσε τα δύο άκρα του με το **VCC** ακροδέκτη σε κάθε έναν από τους δύο αισθητήρες.
 
 ![power](images/power.jpg) \--- /task \---
 
-\--- task \--- Take the second of your soldered jumper leads, and connect two ends to the **GND** pin on each line sensor. ![ground](images/ground.jpg) \--- /task \---
+\--- task \--- Πάρε τον δεύτερο από τους συγκολλημένους αγωγούς σου και σύνδεσε τα δύο άκρα του με το **GND** ακροδέκτη σε κάθε έναν από τους δύο αισθητήρες. ![ground](images/ground.jpg) \--- /task \---
 
-\--- task \--- Take your remaining two single jumper leads and connect each one to the **DO** pin on each line sensors. ![digital out](images/digital_out.jpg) \--- /task \---
+\--- task \--- Πάρε τα υπόλοιπα δυο μονά καλώδια και σύνδεσε το καθένα στο **DO** pin σε κάθε αισθητήρα γραμμής. ![digital out](images/digital_out.jpg) \--- /task \---
 
-\--- task \--- Now connect the **VCC** pins of both line sensors to a **5V** pin on your Raspberry Pi, and the **GND** pins of the sensors to a **GND** pin on your Raspberry Pi. Each of the two **DO** pins can be connected to any numbered GPIO pin. In this example, pins **GPIO 17** and **GPIO 27** are used. ![connected](images/connected.jpg) \--- /task \---
+\--- task \--- Σύνδεσε τώρα τους **VCC** ακροδέκτες και των δύο αισθητήρων γραμμής στο **5V** pin στο Raspberry Pi σου, και τους **GND** ακροδέκτες των αισθητήρων στο **GND** pin του Raspberry Pi. Κάθε ένα από τα δύο **DO** pins μπορούν να συνδεθούν με οποιοδήποτε αριθμημένο GPIO pin. Σε αυτό το παράδειγμα, χρησιμοποιούνται τα pin **GPIO 17** και **GPIO 27**. ![connected](images/connected.jpg) \--- /task \---
