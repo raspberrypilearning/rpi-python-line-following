@@ -49,7 +49,7 @@ right_sensor.close()
 
 \--- task \--- Τώρα εκτέλεσε τον κώδικα σου και δοκίμασε το ρομπότ σου πάνω σε μία διαδρομή. \--- /task \---
 
-Μερικές φορές το ρομπότ τρέχει λίγο περισσότερο γρήγορα, οπότε μπορείς να πειράξεις τον κώδικα λίγο όπως φαίνεται στο παρακάτω ολοκληρωμένο script. This adds in a speed multiplier to slow the robot down a little.
+Μερικές φορές το ρομπότ τρέχει λίγο περισσότερο γρήγορα, οπότε μπορείς να πειράξεις τον κώδικα λίγο όπως φαίνεται στο παρακάτω ολοκληρωμένο script. Αυτό πειράζει λίγο την ταχύτητα για να επιβραδύνει λίγο το ρομπότ.
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -85,4 +85,4 @@ robot.source = None
 robot.close()
 left_sensor.close()
 right_sensor.close()
-```<video width="640" height="360" controls> <source src="images/showcase.webm" type="video/webm"> Your browser does not support WebM video, so try FireFox or Chrome. </video>
+```<video width="640" height="360" controls> <source src="images/showcase.webm" type="video/webm"> Το πρόγραμμα περιήγησής σου δεν υποστηρίζει βίντεο WebM, επομένως δοκίμασε το FireFox ή το Chrome. </video>
