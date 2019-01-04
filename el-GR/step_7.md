@@ -1,6 +1,6 @@
-## The final algorithm
+## Ο τελικός αλγόριθμος
 
-Now that you are outputting values that the motors can use, it is time to feed these values in.
+Τώρα που εμφανίζεις τιμές που μπορούν να χρησιμοποιήσουν οι κινητήρες, μπορείς να τους τις δώσεις.
 
 To begin with you're going to turn your `while True` loop into a **generator**. A generator is a little like a function, except that it will continually run and only `yield` values when it is asked for them.
 
