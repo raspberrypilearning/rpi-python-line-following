@@ -4,7 +4,7 @@
 
 Όταν ένας αισθητήρας γραμμής είναι πάνω από μια γραμμή, εμφανίζει ένα `1`. Όταν είναι εκτός γραμμής, εμφανίζει ένα `0`.
 
-Οι κινητήρες λειτουργούν ελαφρώς διαφορετικά: το ρομπότ, όποτε λαμβάνει σήμα `1` προς το δεξιό μοτέρ, οδηγεί αυτό το μοτέρ προς τα εμπρός. When it receives a `-1`, it drives the motor backwards.
+Οι κινητήρες λειτουργούν ελαφρώς διαφορετικά: το ρομπότ, όποτε λαμβάνει σήμα `1` προς το δεξιό κινητήρα, οδηγεί αυτόν τον κινητήρα προς τα εμπρός. When it receives a `-1`, it drives the motor backwards.
 
 Let's have a look at an algorithm that takes into account the position of the robot, the states of the lines sensors, and the actions required of the motors.
 
