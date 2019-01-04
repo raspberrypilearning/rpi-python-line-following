@@ -2,7 +2,7 @@
 
 **Σημείωση:** Σε αυτό το παράδειγμα, η πλακέτα ελέγχου κινητήρα είναι συνδεδεμένη έτσι ώστε ο αριστερός κινητήρας να βρίσκεται στα pin **GPIO 7** και **GPIO 8** , και ο δεξιός κινητήρας να βρίσκεται στα pin **GPIO 9** και **GPIO 10** . Ο αριστερός αισθητήρας γραμμής βρίσκεται στο pin **GPIO 17**, και ο δεξιός αισθητήρας γραμμής βρίσκεται στο pin **GPIO 27**.
 
-\--- task \--- Open up your preferred text editor or IDE on your Raspberry Pi, and begin by setting up your motor controller board and your sensors using `gpiozero`:
+\--- task \--- Άνοιξε τον επεξεργαστή κειμένου ή το IDE που προτιμάς στο Raspberry Pi και ξεκίνα να σετάρεις τον ελεγκτή του κινητήρα σου και τους αισθητήρες σου χρησιμοποιώντας το `gpiozero`:
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -32,16 +32,16 @@ left_sensor.when_no_line = function_name_to_call
 
 \---hints\--- \---hint\--- Οι γραμμές πρέπει να εκτελούν τους ακόλουθους κανόνες:
 
-1. If there's a line under the left sensor, turn left
-2. If there's a line under the right sensor, turn right
-3. If there's no line under the right sensor, drive forwards
-4. If there's no line under the left sensor, drive forwards \--- /hint \--- \--- hint \--- The syntax used in the example program is as follows for the first line:
+1. Εάν υπάρχει μια γραμμή κάτω από τον αριστερό αισθητήρα, στρίψε αριστερά
+2. Εάν υπάρχει μια γραμμή κάτω από τον δεξιό αισθητήρα, στρίψε δεξιά
+3. Εάν δεν υπάρχει γραμμή κάτω από τον δεξιό αισθητήρα, προχώρησε προς τα εμπρός
+4. Εάν δεν υπάρχει γραμμή κάτω από τον αριστερό αισθητήρα, προχώρησε προς τα εμπρός \--- /hint \--- \---hint\--- Η σύνταξη που χρησιμοποιείται στο υπόδειγμα έχει ως εξής για την πρώτη γραμμή:
 
 ```python
 left_sensor.when_line = robot.left
 ```
 
-Now try to complete the remaining three lines. \--- /hint \--- \--- hint \--- Here are the four lines of code you need. If you're running your code from the terminal, you'll need to add `pause()` at the end as well.
+Τώρα προσπάθησε να ολοκληρώσεις τις υπόλοιπες τρεις γραμμές. \--- /hint \--- \--- hint \--- Εδώ είναι οι τέσσερις γραμμές κώδικα που χρειάζεσαι. Εάν εκτελείς τον κώδικά σου από το τερματικό, θα πρέπει επίσης να προσθέσεις παύση `pause()` στο τέλος.
 
 ```python
 left_sensor.when_line = robot.left
@@ -54,6 +54,6 @@ pause()
 
 \--- /hint \--- \--- /hints \---
 
-Don't worry if you're robot tracks off its line a bit. Just observe if it attempts to stay on the line. Here's an example of a robot running on a basic track with this algorithm.
+Μην ανησυχείς αν το ρομπότ ξεφεύγει από τη γραμμή του για λίγο. Απλώς παρατήρησε εάν προσπαθεί να παραμείνει στη γραμμή. Ακολουθεί ένα παράδειγμα ενός ρομπότ που τρέχει σε μια βασική διαδρομή με αυτόν τον αλγόριθμο.
 
 ![final](images/final.gif)
