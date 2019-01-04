@@ -1,6 +1,6 @@
-## Programming a line following algorithm
+## Γράψε έναν αλγόριθμο για να ακολουθεί το ρομπότ τη γραμμή
 
-**Note:** In this example, the motor controller board is connected so that the left motor is on pins **GPIO 7** and **GPIO 8**, and the right motor is on pins **GPIO 9** and **GPIO 10**. The left line sensor is on pin **GPIO 17**, and the right line sensor is on pin **GPIO 27**.
+**Σημείωση:** Σε αυτό το παράδειγμα, η πλακέτα ελέγχου κινητήρα είναι συνδεδεμένη έτσι ώστε ο αριστερός κινητήρας να βρίσκεται στα pin **GPIO 7** και **GPIO 8** , και ο δεξιός κινητήρας να βρίσκεται στα pin **GPIO 9** και **GPIO 10** . Ο αριστερός αισθητήρας γραμμής βρίσκεται στο pin **GPIO 17**, και ο δεξιός αισθητήρας γραμμής βρίσκεται στο pin **GPIO 27**.
 
 \--- task \--- Open up your preferred text editor or IDE on your Raspberry Pi, and begin by setting up your motor controller board and your sensors using `gpiozero`:
 
@@ -16,17 +16,17 @@ right_sensor= LineSensor(27)
 
 \--- /task \---
 
-To begin with, write a really simple line following algorithm, just to test that your robot is working.
+Αρχικά, γράψε έναν πολύ απλό αλγόριθμο, μόνο για να ελέγξεις ότι το ρομπότ σου λειτουργεί.
 
-The `gpiozero` module can call a function depending on whether or not a line has been detected. For example:
+Το `gpiozero` μπορεί να καλέσει μια συνάρτηση ανάλογα με το αν έχει ανιχνευθεί ή όχι μια γραμμή. Για παράδειγμα:
 
 ```python
 left_sensor.when_no_line = function_name_to_call
 ```
 
-This will tell the robot to do something when the `left_sensor` detects that it is not above a line. By telling the robot to go forward when no line has been detected, but to turn if a line is detected, you can produce very basic line following behavior.
+Αυτό θα πει στο ρομπότ να κάνει κάτι όταν ο `αριστερός αισθητήρας (left_sensor)` ανιχνεύσει ότι δεν είναι πάνω από μια γραμμή. Λέγοντας στο ρομπότ να προχωρήσει όταν δεν έχει εντοπιστεί καμία γραμμή, αλλά να γυρίσει αν εντοπιστεί μια γραμμή, μπορείς να δημιουργήσεις μία πολύ βασική συμπεριφορά οδήγησης με βοήθεια γραμμής.
 
-\--- task \--- Add four lines of code to your robot program to produce a basic line following algorithm.
+\--- task \--- Πρόσθεσε τέσσερις γραμμές κώδικα στο πρόγραμμα του ρομπότ σου για να δημιουργήσεις έναν βασικό αλγόριθμο.
 
 \--- /task \---
 
