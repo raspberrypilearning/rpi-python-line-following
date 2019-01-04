@@ -36,7 +36,7 @@ robot.source = motor_speed()
 
 \--- /task \---
 
-To make sure that the robot doesn't keep running forever, and to close all the components connections cleanly, you can optionally add in these lines as well:
+Για να βεβαιωθείς ότι το ρομπότ δεν συνεχίζει να τρέχει για πάντα και να κλείσεις καθαρά όλες τις συνδέσεις των εξαρτημάτων, μπορείς επίσης να προσθέσεις και αυτές τις γραμμές:
 
 ```python
 sleep(60)
@@ -47,9 +47,9 @@ left_sensor.close()
 right_sensor.close()
 ```
 
-\--- task \--- Now run your code and test your robot over a track. \--- /task \---
+\--- task \--- Τώρα εκτέλεσε τον κώδικα σου και δοκίμασε το ρομπότ σου πάνω σε μία διαδρομή. \--- /task \---
 
-Sometimes the robot runs a little too fast, so you can tweak your code a bit as shown in the following completed script. This adds in a speed multiplier to slow the robot down a little.
+Μερικές φορές το ρομπότ τρέχει λίγο περισσότερο γρήγορα, οπότε μπορείς να πειράξεις τον κώδικα λίγο όπως φαίνεται στο παρακάτω ολοκληρωμένο script. This adds in a speed multiplier to slow the robot down a little.
 
 ```python
 from gpiozero import Robot, LineSensor
