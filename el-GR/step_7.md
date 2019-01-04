@@ -28,7 +28,7 @@ def motor_speed():
 
 Τώρα το μόνο που χρειάζεται να κάνεις είναι να πεις ότι η `πηγή (source)` των τιμών του κινητήρα του ρομπότ θα είναι το αποτέλεσμα της γεννήτριας.
 
-\--- task \--- Add in this line of code below the generator:
+\--- task \--- Πρόσθεσε σε αυτή τη γραμμή κώδικα κάτω από τη γεννήτρια:
 
 ```python
 robot.source = motor_speed()
