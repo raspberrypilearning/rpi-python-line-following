@@ -1,10 +1,10 @@
-## Plan a better algorithm
+## Σχεδίασε έναν καλύτερο αλγόριθμο
 
-The previous algorithm might be OK, it can easily be improved upon. Let's see what a better algorithm might look like!
+Ο προηγούμενος αλγόριθμος μπορεί να είναι εντάξει, αλλά μπορεί επίσης εύκολα να βελτιωθεί. Ας δούμε πώς θα μπορούσε να μοιάζει ένας καλύτερος αλγόριθμος!
 
-When a line sensor is above a line, it outputs a `1`. When it's off a line, it outputs a `0`.
+Όταν ένας αισθητήρας γραμμής είναι πάνω από μια γραμμή, εμφανίζει ένα `1`. Όταν είναι εκτός γραμμής, εμφανίζει ένα `0`.
 
-The motors work slightly differently though: the robot, whenever it receives a `1` signal to the right motor, drives that motor forwards. When it receives a `-1`, it drives the motor backwards.
+Οι κινητήρες λειτουργούν ελαφρώς διαφορετικά: το ρομπότ, όποτε λαμβάνει σήμα `1` προς το δεξιό μοτέρ, οδηγεί αυτό το μοτέρ προς τα εμπρός. When it receives a `-1`, it drives the motor backwards.
 
 Let's have a look at an algorithm that takes into account the position of the robot, the states of the lines sensors, and the actions required of the motors.
 
