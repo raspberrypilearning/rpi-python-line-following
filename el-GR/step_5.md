@@ -30,7 +30,7 @@ left_sensor.when_no_line = function_name_to_call
 
 \--- /task \---
 
-\--- hints \--- \--- hint \--- The lines should perform the following tasks:
+\---hints\--- \---hint\--- Οι γραμμές πρέπει να εκτελούν τους ακόλουθους κανόνες:
 
 1. If there's a line under the left sensor, turn left
 2. If there's a line under the right sensor, turn right
