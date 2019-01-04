@@ -26,7 +26,7 @@ def motor_speed():
 
 \--- /task \---
 
-Now all you need to do is to say that the `source` of the robot's motor values is going to be the result of the generator.
+Τώρα το μόνο που χρειάζεται να κάνεις είναι να πεις ότι η `πηγή (source)` των τιμών του κινητήρα του ρομπότ θα είναι το αποτέλεσμα της γεννήτριας.
 
 \--- task \--- Add in this line of code below the generator:
 
