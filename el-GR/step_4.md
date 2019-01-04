@@ -1,6 +1,6 @@
-## Test the line sensors
+## Έλεγξε τους αισθητήρες γραμμής
 
-Next you're going to test whether your line sensors are working, and you'll tune them a little.
+Στη συνέχεια θα ελέγξεις αν οι αισθητήρες γραμμής σου λειτουργούν και θα τους ρυθμίσεις.
 
 \--- task \--- Cut two small holes in the bottom of your buggy so that the sensor can view the line beneath it, and secure your sensors in place. ![through-hole](images/throughhole.jpg) \--- /task \---
 
