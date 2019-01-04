@@ -45,21 +45,21 @@ while True:
     print(left_detect, right_detect)
 ```
 
-Now move the robot back and forth over the line to see what happens. \--- /task \---
+Τώρα μετακίνησε το ρομπότ μπρος-πίσω πάνω απ' τη γραμμή για να δεις τι συμβαίνει. \--- /task \---
 
-Hopefully, you should see the binary output from the sensors.
+Λογικά, θα δεις την ψηφιακή έξοδο από τους αισθητήρες.
 
 ![sensor_output](images/sensor_output.gif)
 
-So now that you have the sensor output, you need to alter it a little before you send it to the motors. As per the algorithm above:
+Τώρα που έχεις την έξοδο από τους αισθητήρες, θα πρέπει να την αλλάξεις λίγο πριν τη στείλεις στους κινητήρες. Σύμφωνα με τον παραπάνω αλγόριθμο:
 
-- If both sensors output `0`, then both motors should receive `1`
-- If the right sensor outputs `1`, then the left motor should receive `-1`
-- If the left sensor outputs `1`, then the right motor should receive `-1`
+- Εάν και οι δύο αισθητήρες εξάγουν `0` , τότε και οι δύο κινητήρες πρέπει να λαμβάνουν `1`
+- Εάν ο δεξιός αισθητήρας εξάγει `1` , τότε ο αριστερός κινητήρας πρέπει να λάβει `-1`
+- Εάν ο αριστερός αισθητήρας εξάγει `1` , τότε ο δεξιός κινητήρας πρέπει να λάβει `-1`
 
 \--- task \---
 
-Within the `while True` loop, create two new variables called `left_mot` and `right_mot`. These variables should have the same value that you would like the motors to receive. You can simply print out their values within the loop.
+Εντός του βρόχου `while True`, δημιούργησε δύο νέες μεταβλητές: `left_mot` και `right_mot`. Αυτές οι μεταβλητές θα πρέπει να έχουν την ίδια τιμή, με αυτήν που θα ήθελες να λαμβάνουν οι κινητήρες. You can simply print out their values within the loop.
 
 \--- /task \---
 
