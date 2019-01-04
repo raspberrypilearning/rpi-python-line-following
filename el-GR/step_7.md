@@ -2,9 +2,9 @@
 
 Τώρα που εμφανίζεις τιμές που μπορούν να χρησιμοποιήσουν οι κινητήρες, μπορείς να τους τις δώσεις.
 
-To begin with you're going to turn your `while True` loop into a **generator**. A generator is a little like a function, except that it will continually run and only `yield` values when it is asked for them.
+Για να ξεκινήσουμε θα μετατρέψεις το βρόχο σου `while True` σε μία **γεννήτρια (generator)**. Μια γεννήτρια είναι κάτι σαν μια συνάρτηση, εκτός από το ότι θα τρέχει συνεχώς και θα `επιστρέφει` τιμές όταν της ζητηθεί.
 
-\--- task \--- Turn your loop into a generator like this:
+\--- task \--- Κανε τον βρόχο σου γεννήτρια όπως παρακάτω:
 
 ```python
 def motor_speed():
