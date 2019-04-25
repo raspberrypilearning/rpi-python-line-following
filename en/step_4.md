@@ -3,6 +3,10 @@
 Next you're going to test whether your line sensors are working, and you'll tune them a little.
 
 --- task ---
+With the line sensor attached, boot up your Raspberry Pi.
+--- /task ---
+
+--- task ---
 Cut two small holes in the bottom of your buggy so that the sensor can view the line beneath it, and secure your sensors in place.
 ![through-hole](images/throughhole.jpg)
 --- /task ---
