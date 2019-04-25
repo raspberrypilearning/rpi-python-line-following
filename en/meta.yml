@@ -3,7 +3,7 @@ hero_image: images/banner.png
 description: Make your robot buggy follow a track by itself
 theme: red # possible values: blue, green, navy, orange, red, turquoise, violet, yellow
 duration: 3
-version: 4
+version: 4.01
 listed: true
 ingredient: false
 copyedit: true
