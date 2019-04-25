@@ -21,7 +21,8 @@ To begin with, write a really simple line following algorithm, just to test that
 The `gpiozero` module can call a function depending on whether or not a line has been detected. For example:
 
 ```python
-left_sensor.when_no_line = function_name_to_call
+left_sensor.when_line = function_name_to_call
+left_sensor.when_no_line = other_function_name_to_call
 ```
 
 This will tell the robot to do something when the `left_sensor` detects that it is not above a line.
