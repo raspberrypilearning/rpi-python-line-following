@@ -3,7 +3,7 @@
 **Note:** In this example, the motor controller board is connected so that the left motor is on pins **GPIO 7** and **GPIO 8**, and the right motor is on pins **GPIO 9** and **GPIO 10**. The left line sensor is on pin **GPIO 17**, and the right line sensor is on pin **GPIO 27**.
 
 --- task ---
-Open up your preferred text editor or IDE on your Raspberry Pi, and begin by setting up your motor controller board and your sensors using `gpiozero`:
+Open up **mu** from the Raspberry Pi **Programming** menu, and begin by setting up your motor controller board and your sensors using `gpiozero`:
 
 ```python
 from gpiozero import Robot, LineSensor
