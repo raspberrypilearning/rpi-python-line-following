@@ -6,12 +6,30 @@ First, you're going to prepare your leads!
 
 \--- task\---
 
-- Take three of your female-to-female jumper leads, remove a connector from each end, and then strip the plastic sheath to reveal about a centimeter of the multi-core wire beneath. ![stripped](images/stripped.jpg) \--- /task \---
+- Take three of your female-to-female jumper leads, remove a connector from each end, and then strip the plastic sheath to reveal about a centimeter of the multi-core wire beneath.
+
+![stripped](images/stripped.jpg)
+
+\--- /task \---
 
 \--- task \---
 
-- Take the three jumper leads and twist their multi-core wires together. Then use a soldering iron to bond the leads. ![solder](images/solder.gif) \--- /task \---
+- Take the three jumper leads and twist their multi-core wires together. Then use a soldering iron to bond the leads.
 
-\--- task \--- Cover the join of the leads with a small amount of insulating tape. ![soldered](images/soldered.jpg) \--- /task \---
+![solder](images/solder.gif)
 
-\--- task \--- Repeat the entire process with another three female-to-female jumper leads. \--- /task \---
+\--- /task \---
+
+\--- task \---
+
+Cover the join of the leads with a small amount of insulating tape.
+
+![soldered](images/soldered.jpg)
+
+\--- /task \---
+
+\--- task \---
+
+Repeat the entire process with another three female-to-female jumper leads.
+
+\--- /task \---
