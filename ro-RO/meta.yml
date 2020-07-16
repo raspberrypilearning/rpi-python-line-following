@@ -1,0 +1,32 @@
+---
+title: Construiește un robot de urmărire a liniei
+hero_image: images/banner.png
+description: Asigură-te că micul robot urmează singur un traseu
+theme: red #possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+duration: 3
+version: 4.01
+listed: true
+ingredient: false
+copyedit: true
+last_tested: "2018-04-10"
+curriculum: 3, design-0, programming-3, phys-comp-3, manufacture-2, community-0
+interests: "robotics"
+technologies: "electronic-components, raspberry-pi, python"
+hardware: "electronic-components, raspberry-pi"
+software: "python"
+site_areas: projects
+steps:
+  - 
+    title: Introducere
+  - 
+    title: Pregătește conectorii
+  - 
+    title: Conectează senzorii de linie
+  - 
+    title: Testează senzorii de linie
+  - 
+    title: Programează un algoritm de urmărire a liniei
+  - 
+    title: Proiectează un algoritm mai bun
+  - 
+    title: Algoritmul final
