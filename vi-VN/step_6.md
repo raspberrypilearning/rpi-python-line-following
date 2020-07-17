@@ -29,7 +29,9 @@ Let's have a look at an algorithm that takes into account the position of the ro
 
 How can you make this happen in code? First of all, you'll create an infinite loop to view the sensor values.
 
-\--- task \--- In a new file, add in the following lines of code and run it. Don't forget to adjust the pin numbers if you've used different GPIO pins.
+\--- task \---
+
+In a new file, add in the following lines of code and run it. Don't forget to adjust the pin numbers if you've used different GPIO pins.
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -45,7 +47,9 @@ while True:
     print(left_detect, right_detect)
 ```
 
-Now move the robot back and forth over the line to see what happens. \--- /task \---
+Now move the robot back and forth over the line to see what happens.
+
+\--- /task \---
 
 Hopefully, you should see the binary output from the sensors.
 
@@ -63,7 +67,13 @@ Within the `while True` loop, create two new variables called `left_mot` and `ri
 
 \--- /task \---
 
-\--- hints \--- \--- hint \--- According to the above algorithm, `if left_detect == 0 and right_detect == 0:`, what do you want the values of `left_mot` and `right_mot` to be? \--- /hint \--- \--- hint \--- Here's the code for the first condition:
+\--- hints \--- \--- hint \---
+
+According to the above algorithm, `if left_detect == 0 and right_detect == 0:`, what do you want the values of `left_mot` and `right_mot` to be?
+
+\--- /hint \--- \--- hint \---
+
+Here's the code for the first condition:
 
     while True:
         left_detect  = int(left_sensor.value)
@@ -73,7 +83,13 @@ Within the `while True` loop, create two new variables called `left_mot` and `ri
             right_mot = 1
     
 
-You need two more `if` statements to handle the sensors being triggered by a line. \--- /hint \--- \--- hint \--- Here's the completed code, with the print statements: ```python while True: left_detect = int(left_sensor.value) right_detect = int(right_sensor.value)
+You need two more `if` statements to handle the sensors being triggered by a line.
+
+\--- /hint \--- \--- hint \---
+
+Here's the completed code, with the print statements:
+
+```python while True: left_detect = int(left_sensor.value) right_detect = int(right_sensor.value)
 
     if left_detect == 0 and right_detect == 0:
         left_mot = 1
@@ -87,6 +103,14 @@ You need two more `if` statements to handle the sensors being triggered by a lin
     print(right_mot, left_mot)
     
 
-``` \--- /hint \--- \--- /hints \---
+```
 
-\--- task \--- When you are done, run your code and test how it works when you move the robot over the line. ![sensor_output2.gif](images/sensor_output2.gif) \--- /task \---
+\--- /hint \--- \--- /hints \---
+
+\--- task \---
+
+When you are done, run your code and test how it works when you move the robot over the line.
+
+![sensor_output2.gif](images/sensor_output2.gif)
+
+\--- /task \---
