@@ -4,7 +4,9 @@ Now that you are outputting values that the motors can use, it is time to feed t
 
 To begin with you're going to turn your `while True` loop into a **generator**. A generator is a little like a function, except that it will continually run and only `yield` values when it is asked for them.
 
-\--- task \--- Turn your loop into a generator like this:
+\--- task \---
+
+Turn your loop into a generator like this:
 
 ```python
 def motor_speed():
@@ -28,7 +30,9 @@ def motor_speed():
 
 Now all you need to do is to say that the `source` of the robot's motor values is going to be the result of the generator.
 
-\--- task \--- Add in this line of code below the generator:
+\--- task \---
+
+Add in this line of code below the generator:
 
 ```python
 robot.source = motor_speed()
@@ -47,7 +51,11 @@ left_sensor.close()
 right_sensor.close()
 ```
 
-\--- task \--- Now run your code and test your robot over a track. \--- /task \---
+\--- task \---
+
+Now run your code and test your robot over a track.
+
+\--- /task \---
 
 Sometimes the robot runs a little too fast, so you can tweak your code a bit as shown in the following completed script. This adds in a speed multiplier to slow the robot down a little.
 
