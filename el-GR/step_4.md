@@ -2,14 +2,30 @@
 
 Στη συνέχεια θα ελέγξεις αν οι αισθητήρες γραμμής σου λειτουργούν και θα τους ρυθμίσεις.
 
-\--- task \--- Κόψε δύο μικρές τρύπες στο κάτω μέρος του buggy σου έτσι ώστε ο αισθητήρας να μπορεί να δει τη γραμμή από κάτω και τοποθέτησε τους αισθητήρες σου στη θέση τους. ![through-hole](images/throughhole.jpg) \--- /task \---
+\--- task \---
 
-Όταν οι αισθητήρες περνάνε πάνω από μια σκοτεινή γραμμή, το λαμπάκι στην πλακέτα του αισθητήρα θα πρέπει να σβήσει.
+With the line sensor attached, boot up your Raspberry Pi.
+
+\--- /task \---
+
+\--- task \---
+
+Cut two small holes in the bottom of your buggy so that the sensor can view the line beneath it, and secure your sensors in place.
+
+![through-hole](images/throughhole.jpg)
+
+\--- /task \---
+
+When the sensors pass over a dark line, the LED on the sensor board should turn off.
 
 ![tune](images/tune.gif)
 
-\--- task \--- Χρησιμοποίησε το μικρό ποτενσιόμετρο στην πλακέτα για να ρυθμίσεις τους αισθητήρες σου, έτσι ώστε τα λαμπάκια να σβήνουν όταν βρίσκονται πάνω από μια σκοτεινή γραμμή και να ανάβουν καθώς περνούν πάνω από λευκή περιοχή.
+\--- task \---
 
-![tune](images/tune.jpg) \--- /task \---
+Use the small potentiometer on the board to tune your sensors, so that the LEDs turns off when over a dark line, and lights up when over white space.
 
-Μόλις ρυθμίσεις τους αισθητήρες, μπορείς να προχωρήσεις στον προγραμματισμό του ρομπότ σου.
+![tune](images/tune.jpg)
+
+\--- /task \---
+
+Once you have tuned the sensors, you can proceed to programming your robot.
