@@ -2,7 +2,9 @@
 
 **Note:** In this example, the motor controller board is connected so that the left motor is on pins **GPIO 7** and **GPIO 8**, and the right motor is on pins **GPIO 9** and **GPIO 10**. The left line sensor is on pin **GPIO 17**, and the right line sensor is on pin **GPIO 27**.
 
-\--- task \--- Open up your preferred text editor or IDE on your Raspberry Pi, and begin by setting up your motor controller board and your sensors using `gpiozero`:
+\--- task \---
+
+Open up **mu** from the Raspberry Pi **Programming** menu, and begin by setting up your motor controller board and your sensors using `gpiozero`:
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -27,22 +29,34 @@ left_sensor.when_no_line = other_function_name_to_call
 
 This will tell the robot to do something when the `left_sensor` detects that it is not above a line. By telling the robot to go forward when no line has been detected, but to turn if a line is detected, you can produce very basic line following behavior.
 
-\--- task \--- Add four lines of code to your robot program to produce a basic line following algorithm.
+\--- task \---
+
+Add four lines of code to your robot program to produce a basic line following algorithm.
 
 \--- /task \---
 
-\--- hints \--- \--- hint \--- The lines should perform the following tasks:
+\--- hints \--- \--- hint \---
+
+The lines should perform the following tasks:
 
 1. If there's a line under the left sensor, turn left
 2. If there's a line under the right sensor, turn right
 3. If there's no line under the right sensor, drive forwards
-4. If there's no line under the left sensor, drive forwards \--- /hint \--- \--- hint \--- The syntax used in the example program is as follows for the first line:
+4. If there's no line under the left sensor, drive forwards
+
+\--- /hint \--- \--- hint \---
+
+The syntax used in the example program is as follows for the first line:
 
 ```python
 left_sensor.when_line = robot.left
 ```
 
-Now try to complete the remaining three lines. \--- /hint \--- \--- hint \--- Here are the four lines of code you need. If you're running your code from the terminal, you'll need to add `pause()` at the end as well.
+Now try to complete the remaining three lines.
+
+\--- /hint \--- \--- hint \---
+
+Here are the four lines of code you need. If you're running your code from the terminal, you'll need to add `pause()` at the end as well.
 
 ```python
 left_sensor.when_line = robot.left
