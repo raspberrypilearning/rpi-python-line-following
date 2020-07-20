@@ -1,0 +1,37 @@
+## Conectează senzorii de urmărire a liniei
+
+Fiecare senzor de urmărire a liniei are trei pini: **VCC** pentru putere, **GND** pentru împământare și **DO** pentru ieșirea digitală.
+
+![senzor de urmărire a liniei](images/sensor.jpg)
+
+\--- task \---
+
+Take one of your soldered-together three-wire jumper leads, and connect two of its ends to the **VCC** pin on each of the two sensors.
+
+![power](images/power.jpg)
+
+\--- /task \---
+
+\--- task \---
+
+Take the second of your soldered jumper leads, and connect two ends to the **GND** pin on each line sensor.
+
+![ground](images/ground.jpg)
+
+\--- /task \---
+
+\--- task \---
+
+Take your remaining two single jumper leads and connect each one to the **DO** pin on each line sensors.
+
+![digital out](images/digital_out.jpg)
+
+\--- /task \---
+
+\--- task \---
+
+Now connect the **VCC** pins of both line sensors to a **5V** pin on your Raspberry Pi, and the **GND** pins of the sensors to a **GND** pin on your Raspberry Pi. Each of the two **DO** pins can be connected to any numbered GPIO pin. In this example, pins **GPIO 17** and **GPIO 27** are used.
+
+![connected](images/connected.jpg)
+
+\--- /task \---
