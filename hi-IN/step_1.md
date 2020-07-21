@@ -19,7 +19,7 @@ image: images/image
 
 ![components](images/components.jpg)
 
-आप इस प्रोजेक्ट में उपयोग की जाने वाले लाइन का पालन करने वाले सेंसर को इस [छोटी गाड़ी की खरीदारी की सूची](https://my.aliexpress.com/wishlist/wish_list_product_list.htm?spm=a2g0s.8937460.0.0.EKSrsx&currentGroupId=100000000943756) के माध्यम से खरीद सकते हैं {:target="_blank"}, हालांकि यहां कोई भी लाइन सेंसर काम करेगा।
+आप इस प्रोजेक्ट में उपयोग की जाने वाले लाइन का पालन करने वाले सेंसर को इस [छोटी गाड़ी की खरीदारी की सूची](https://my.aliexpress.com/wishlist/wish_list_product_list.htm?spm=a2g0s.8937460.0.0.EKSrsx&currentGroupId=100000000943756){:target="_blank"} के माध्यम से खरीद सकते हैं, हालांकि यहां कोई भी लाइन सेंसर काम करेगा।
 
 --- /collapse ---
 

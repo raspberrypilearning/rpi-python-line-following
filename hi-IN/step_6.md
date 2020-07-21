@@ -75,14 +75,14 @@ while True:
 --- /hint --- --- hint ---
 
 यहाँ पहली शर्त के लिए कोड है:
-
+```
     while True:
         left_detect  = int(left_sensor.value)
         right_detect = int(right_sensor.value)
         if left_detect == 0 and right_detect == 0:
             left_mot = 1
             right_mot = 1
-    
+```    
 
 आपको एक लाइन द्वारा चालू किए जा रहे सेंसर को संभालने के लिए दो और `if` बयान चाहिए।
 
@@ -90,21 +90,22 @@ while True:
 
 यहां प्रिंट कथनों के साथ पूरा कोड दिया गया है:
 
-```python while True: left_detect = int(left_sensor.value) right_detect = int(right_sensor.value)
+```python
+while True:
+	left_detect  = int(left_sensor.value)
+	right_detect = int(right_sensor.value)
 
-    if left_detect == 0 and right_detect == 0:
-        left_mot = 1
-        right_mot = 1
-    
-    if left_detect == 0 and right_detect == 1:
-        left_mot = -1
-    if left_detect == 1 and right_detect == 0:
-        right_mot = -1
-    
-    print(right_mot, left_mot)
-    
+	if left_detect == 0 and right_detect == 0:
+		left_mot = 1
+		right_mot = 1
 
-```
+	if left_detect == 0 and right_detect == 1:
+		left_mot = -1
+	if left_detect == 1 and right_detect == 0:
+		right_mot = -1
+
+	print(right_mot, left_mot)
+ ```
 
 --- /hint ------ /hints ---
 
