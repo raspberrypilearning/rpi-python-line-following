@@ -4,7 +4,9 @@
 
 Για να ξεκινήσουμε θα μετατρέψεις το βρόχο σου `while True` σε μία **γεννήτρια (generator)**. Μια γεννήτρια είναι κάτι σαν μια συνάρτηση, εκτός από το ότι θα τρέχει συνεχώς και θα `επιστρέφει` τιμές όταν της ζητηθεί.
 
-\--- task \--- Κανε τον βρόχο σου γεννήτρια όπως παρακάτω:
+\--- task \---
+
+Turn your loop into a generator like this:
 
 ```python
 def motor_speed():
@@ -26,9 +28,11 @@ def motor_speed():
 
 \--- /task \---
 
-Τώρα το μόνο που χρειάζεται να κάνεις είναι να πεις ότι η `πηγή (source)` των τιμών του κινητήρα του ρομπότ θα είναι το αποτέλεσμα της γεννήτριας.
+Now all you need to do is to say that the `source` of the robot's motor values is going to be the result of the generator.
 
-\--- task \--- Πρόσθεσε σε αυτή τη γραμμή κώδικα κάτω από τη γεννήτρια:
+\--- task \---
+
+Add in this line of code below the generator:
 
 ```python
 robot.source = motor_speed()
@@ -36,7 +40,7 @@ robot.source = motor_speed()
 
 \--- /task \---
 
-Για να βεβαιωθείς ότι το ρομπότ δεν συνεχίζει να τρέχει για πάντα και να κλείσεις καθαρά όλες τις συνδέσεις των εξαρτημάτων, μπορείς επίσης να προσθέσεις και αυτές τις γραμμές:
+To make sure that the robot doesn't keep running forever, and to close all the components connections cleanly, you can optionally add in these lines as well:
 
 ```python
 sleep(60)
@@ -47,9 +51,13 @@ left_sensor.close()
 right_sensor.close()
 ```
 
-\--- task \--- Τώρα εκτέλεσε τον κώδικα σου και δοκίμασε το ρομπότ σου πάνω σε μία διαδρομή. \--- /task \---
+\--- task \---
 
-Μερικές φορές το ρομπότ τρέχει λίγο περισσότερο γρήγορα, οπότε μπορείς να πειράξεις τον κώδικα λίγο όπως φαίνεται στο παρακάτω ολοκληρωμένο script. Αυτό πειράζει λίγο την ταχύτητα για να επιβραδύνει λίγο το ρομπότ.
+Now run your code and test your robot over a track.
+
+\--- /task \---
+
+Sometimes the robot runs a little too fast, so you can tweak your code a bit as shown in the following completed script. This adds in a speed multiplier to slow the robot down a little.
 
 ```python
 from gpiozero import Robot, LineSensor
