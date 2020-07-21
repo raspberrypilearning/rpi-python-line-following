@@ -29,7 +29,9 @@
 
 Πώς μπορείς να το αποτυπώσεις αυτό σε κώδικα; Αρχικά, θα δημιουργήσεις έναν άπειρο βρόχο για να βλέπεις τις τιμές των αισθητήρων.
 
-\--- task \--- Σε ένα νέο αρχείο, πρόσθεσε τις παρακάτω γραμμές κώδικα και εκτέλεσέ το. Μην ξεχάσεις να προσαρμόσεις τους αριθμούς των pin αν χρησιμοποιείς διαφορετικούς ακροδέκτες GPIO.
+\--- task \---
+
+In a new file, add in the following lines of code and run it. Don't forget to adjust the pin numbers if you've used different GPIO pins.
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -45,13 +47,15 @@ while True:
     print(left_detect, right_detect)
 ```
 
-Τώρα μετακίνησε το ρομπότ μπρος-πίσω πάνω απ' τη γραμμή για να δεις τι συμβαίνει. \--- /task \---
+Now move the robot back and forth over the line to see what happens.
 
-Λογικά, θα δεις την ψηφιακή έξοδο από τους αισθητήρες.
+\--- /task \---
+
+Hopefully, you should see the binary output from the sensors.
 
 ![sensor_output](images/sensor_output.gif)
 
-Τώρα που έχεις την έξοδο από τους αισθητήρες, θα πρέπει να την αλλάξεις λίγο πριν τη στείλεις στους κινητήρες. Σύμφωνα με τον παραπάνω αλγόριθμο:
+So now that you have the sensor output, you need to alter it a little before you send it to the motors. As per the algorithm above:
 
 - Εάν και οι δύο αισθητήρες εξάγουν `0` , τότε και οι δύο κινητήρες πρέπει να λαμβάνουν `1`
 - Εάν ο δεξιός αισθητήρας εξάγει `1` , τότε ο αριστερός κινητήρας πρέπει να λάβει `-1`
@@ -59,11 +63,17 @@ while True:
 
 \--- task \---
 
-Εντός του βρόχου `while True`, δημιούργησε δύο νέες μεταβλητές: `left_mot` και `right_mot`. Αυτές οι μεταβλητές θα πρέπει να έχουν την ίδια τιμή, με αυτήν που θα ήθελες να λαμβάνουν οι κινητήρες. Μπορείς απλά να εμφανίσεις τις τιμές τους εντός του βρόχου.
+Within the `while True` loop, create two new variables called `left_mot` and `right_mot`. These variables should have the same value that you would like the motors to receive. You can simply print out their values within the loop.
 
 \--- /task \---
 
-\--- hints \--- \--- hint \--- Σύμφωνα με τον παραπάνω αλγόριθμο, `if left_detect == 0 and right_detect == 0:`, τι τιμές θέλεις να έχουν οι `left_mot` και `right_mot`; \--- /hint \--- \--- hint \--- Εδώ είναι ο κώδικας για την πρώτη συνθήκη:
+\--- hints \--- \--- hint \---
+
+According to the above algorithm, `if left_detect == 0 and right_detect == 0:`, what do you want the values of `left_mot` and `right_mot` to be?
+
+\--- /hint \--- \--- hint \---
+
+Here's the code for the first condition:
 
     while True:
         left_detect  = int(left_sensor.value)
@@ -73,7 +83,13 @@ while True:
             right_mot = 1
     
 
-Χρειάζεσαι άλλα δύο `if` για να χειριστείς του αισθητήρες που παρακολουθούν τη γραμμή. \--- /hint \--- \--- hint \--- Εδώ είναι ο πλήρης κώδικας με τις εντολές print: ```python while True: left_detect = int(left_sensor.value) right_detect = int(right_sensor.value)
+You need two more `if` statements to handle the sensors being triggered by a line.
+
+\--- /hint \--- \--- hint \---
+
+Here's the completed code, with the print statements:
+
+```python while True: left_detect = int(left_sensor.value) right_detect = int(right_sensor.value)
 
     if left_detect == 0 and right_detect == 0:
         left_mot = 1
@@ -87,6 +103,14 @@ while True:
     print(right_mot, left_mot)
     
 
-``` \--- /hint \--- \--- /hints \---
+```
 
-\--- task \--- Όταν τελειώσεις, εκτέλεσε τον κώδικά σου και δοκίμασε πώς λειτουργεί όταν μετακινείς το ρομπότ πάνω από τη γραμμή. ![sensor_output2.gif](images/sensor_output2.gif) \--- /task \---
+\--- /hint \--- \--- /hints \---
+
+\--- task \---
+
+When you are done, run your code and test how it works when you move the robot over the line.
+
+![sensor_output2.gif](images/sensor_output2.gif)
+
+\--- /task \---
