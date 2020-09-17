@@ -5,9 +5,9 @@
 <stream class="cloudflare-video" id="6a20279dbfe23651cfe17ebe616b87b7" loop></stream>
 
 --- collapse ---
-
+---
 title: आपल्याला काय लागणार
-
+---
 ## image: images/image
 
 आपल्या Raspberry Pi बग्गी व्यतिरिक्त, आपल्याला याची आवश्यकता असेल:
@@ -24,8 +24,9 @@ title: आपल्याला काय लागणार
 --- /collapse ---
 
 --- collapse ---
-
-## title: आपण काय शिकणार
+---
+title: आपण काय शिकणार
+---
 
 ह्या प्रकल्पात [Raspberry Pi डिजिटल मेकिंग च्या अभ्यासक्रमतील](http://rpf.io/curriculum){:target="_blank"} पुढील बाबी समाविष्ट आहेत:
 
@@ -36,8 +37,9 @@ title: आपल्याला काय लागणार
 --- /collapse ---
 
 --- collapse ---
-
-## title:: शिक्षकांसाठी अतिरिक्त माहिती
+---
+title: शिक्षकांसाठी अतिरिक्त माहिती
+---
 
 तुम्हाला हा प्रोजेक्ट प्रिंट करणे आवश्यक असल्यास, कृपया [प्रिंटर अनुकूल आवृत्ती](https://projects.raspberrypi.org/mr-IN/projects/rpi-python-line-following/print){:target="_blank"} वापरा.
 
