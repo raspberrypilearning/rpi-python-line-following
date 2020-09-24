@@ -1,35 +1,35 @@
-## Prepare the connectors
+## ಕನೆಕ್ಟರ್‌ಗಳನ್ನು ತಯಾರಿಸಿ
 
-Your first step will be to connect your line sensors to your buggy. Normally, the type of line sensor used in this project needs to be connected to a **3V3** pin, but you're going to run two sensors via the same power pin, so you'll attach both of them to a **5V** pin.
+ನಿಮ್ಮ ಲೈನ್ ಸೆನ್ಸರ್‌ಗಳನ್ನು ನಿಮ್ಮ buggy ಗೆ ಕನೆಕ್ಟ್ ಮಾಡುವುದು ನಿಮ್ಮ ಮೊದಲ ಹೆಜ್ಜೆ. ಸಾಮಾನ್ಯವಾಗಿ, ಈ ಪ್ರಾಜೆಕ್ಟ್ ಅಲ್ಲಿ ಬಳಸುವ ಲೈನ್ ಸೆನ್ಸರ್ ಪ್ರಕಾರವನ್ನು **3V3** pin ಗೆ ಕನೆಕ್ಟ್ ಮಾಡಬೇಕು. ಆದರೆ ನೀವು ಒಂದೇ ಪವರ್ pin ಮೂಲಕ ಎರಡು ಸೆನ್ಸರ್ ಗಳನ್ನು run ಮಾಡುವುದರಿಂದ, ಇವೆರಡನ್ನೂ **5V** pin ಗೆ ಕನೆಕ್ಟ್ ಮಾಡಿ.
 
-First, you're going to prepare your leads!
+ಮೊದಲಿಗೆ, ನೀವು ನಿಮ್ಮ ಲೀಡ್ ಗಳನ್ನು ತಯಾರಿಸುವಿರಿ!
 
 \--- task\---
 
-- Take three of your female-to-female jumper leads, remove a connector from each end, and then strip the plastic sheath to reveal about a centimeter of the multi-core wire beneath.
+- ಮೂರು ಫೀಮೇಲ್-ಟು-ಫೀಮೇಲ್ ಜಂಪರ್ ಲೀಡ್ಸ್ ಅನ್ನು ತೆಗೆದುಕೊಂಡು ಪ್ರತಿ ತುದಿಯಿಂದ ಕನೆಕ್ಟರ್ ಅನ್ನು ತೆಗೆದು ಹಾಕಿ. ಒಂದು ಸೆಂಟಿಮೀಟರ್ ನಷ್ಟು ಮಲ್ಟಿ-ಕೋರ್ ತಂತಿಯು ಕಾಣುವಷ್ಟು ಪ್ಲಾಸ್ಟಿಕ್ ಪೊರೆಯನ್ನು ತೆಗೆಯಿರಿ.
 
-![stripped](images/stripped.jpg)
-
-\--- /task \---
-
-\--- task \---
-
-- Take the three jumper leads and twist their multi-core wires together. Then use a soldering iron to bond the leads.
-
-![solder](images/solder.gif)
+![ಹೊರತೆಗೆಯಲಾದ](images/stripped.jpg)
 
 \--- /task \---
 
 \--- task \---
 
-Cover the join of the leads with a small amount of insulating tape.
+- ಮೂರು ಜಂಪರ್ ಲೀಡ್‌ಗಳನ್ನು ತೆಗೆದುಕೊಂಡು ಅವುಗಳ ಮಲ್ಟಿ-ಕೋರ್ ತಂತಿಗಳನ್ನು ಒಟ್ಟಿಗೆ ತಿರುಗಿಸಿ. ಬೆಸುಗೆ ಹಾಕಿ ಲೀಡ್ ಗಳನ್ನು ಸೇರಿಸಿ.
 
-![soldered](images/soldered.jpg)
+![ಬೆಸುಗೆ](images/solder.gif)
 
 \--- /task \---
 
 \--- task \---
 
-Repeat the entire process with another three female-to-female jumper leads.
+ಸಣ್ಣ ಪ್ರಮಾಣದ ಇನ್ಸುಲೇಟಿಂಗ್ ಟೇಪ್ ಬಳಸಿ ಲೀಡ್ಗಳ ಸೇರ್ಪಡೆಗಳನ್ನು ಮುಚ್ಚಿ.
+
+![ಬೆಸುಗೆ](images/soldered.jpg)
+
+\--- /task \---
+
+\--- task \---
+
+ಮೂರು ಫೀಮೇಲ್-ಟು-ಫೀಮೇಲ್ ಜಂಪರ್ ಲೀಡ್‌ಗಳೊಂದಿಗೆ ಸಂಪೂರ್ಣ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಪುನರಾವರ್ತಿಸಿ.
 
 \--- /task \---
