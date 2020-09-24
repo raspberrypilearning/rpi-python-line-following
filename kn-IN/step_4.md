@@ -1,31 +1,31 @@
-## Test the line sensors
+## ಲೈನ್ ಸೆನ್ಸರ್‌ಗಳನ್ನು ಪರೀಕ್ಷಿಸಿ
 
-Next you're going to test whether your line sensors are working, and you'll tune them a little.
+ಮುಂದೆ ನೀವು ನಿಮ್ಮ ಲೈನ್ ಸೆನ್ಸರ್‌ಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿವೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸುವಿರಿ ಮತ್ತು ಅವುಗಳನ್ನು ಸ್ವಲ್ಪ ಟ್ಯೂನ್ ಮಾಡುವಿರಿ.
 
 \--- task \---
 
-With the line sensor attached, boot up your Raspberry Pi.
+ಲೈನ್ ಸೆನ್ಸರ್ ಲಗತ್ತಿಸಿ, ನಿಮ್ಮ Raspberry Pi ಅನ್ನು ಬೂಟ್ ಮಾಡಿ.
 
 \--- /task \---
 
 \--- task \---
 
-Cut two small holes in the bottom of your buggy so that the sensor can view the line beneath it, and secure your sensors in place.
+Buggy ಯ ಕೆಳಭಾಗದಲ್ಲಿ ಎರಡು ರಂಧ್ರ ಗಳನ್ನು ಮಾಡಿ. ಸೆನ್ಸರ್ ಅವುಗಳ ಕೆಳಗಿರುವ ಎರಡು ರೇಖೆಗಳನ್ನು ನೋಡುವಂತಿರಬೇಕು. ಸೆನ್ಸರ್ ಗಳನ್ನು ಅದರೊಳಗೆ ಇರಿಸಿ.
 
-![through-hole](images/throughhole.jpg)
+![ಥ್ರೂ-ಹೋಲ್](images/throughhole.jpg)
 
 \--- /task \---
 
-When the sensors pass over a dark line, the LED on the sensor board should turn off.
+ಸೆನ್ಸರ್ ಗಳು ಡಾರ್ಕ್ ಲೈನ್ ಮೇಲೆ ಹಾದುಹೋದಾಗ, ಸೆನ್ಸರ್ ಬೋರ್ಡ್‌ನಲ್ಲಿರುವ ಎಲ್ಇಡಿ ಆಫ್ ಆಗಬೇಕು.
 
-![tune](images/tune.gif)
+![ಟ್ಯೂನ್](images/tune.gif)
 
 \--- task \---
 
-Use the small potentiometer on the board to tune your sensors, so that the LEDs turns off when over a dark line, and lights up when over white space.
+ಸೆನ್ಸರ್ ಗಳನ್ನು ಟ್ಯೂನ್ ಮಾಡಲು ಬೋರ್ಡ್‌ನಲ್ಲಿರುವ ಸಣ್ಣ ಪೊಟೆನ್ಟಿಯೊಮೀಟರ್ ಅನ್ನು ಬಳಸಿ, ಇದರಿಂದಾಗಿ ಎಲ್ಇಡಿಗಳು ಡಾರ್ಕ್ ಲೈನ್‌ ಮೇಲಿದ್ದಾಗ ಆಫ್ ಆಗುತ್ತವೆ ಮತ್ತು ಬಿಳಿ ಜಾಗದಲ್ಲಿ ಬೆಳಗುತ್ತವೆ.
 
-![tune](images/tune.jpg)
+![ಟ್ಯೂನ್](images/tune.jpg)
 
 \--- /task \---
 
-Once you have tuned the sensors, you can proceed to programming your robot.
+ನೀವು ಸೆನ್ಸರ್ ಗಳನ್ನು ಟ್ಯೂನ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ರೋಬೋಟ್ ಅನ್ನು ಪ್ರೋಗ್ರಾಮ್ ಮಾಡಲು ಮುಂದುವರಿಯಬಹುದು.
