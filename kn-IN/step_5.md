@@ -1,10 +1,10 @@
-## Programming a line following algorithm
+## ಲೈನ್-ಅನುಸರಿಸುವ ಒಂದು ಅಲ್ಗಾರಿತಮ್ ಮಾಡುವುದು
 
-**Note:** In this example, the motor controller board is connected so that the left motor is on pins **GPIO 7** and **GPIO 8**, and the right motor is on pins **GPIO 9** and **GPIO 10**. The left line sensor is on pin **GPIO 17**, and the right line sensor is on pin **GPIO 27**.
+** ಗಮನಿಸಿ: ** ಈ ಉದಾಹರಣೆಯಲ್ಲಿ, ಮೋಟರ್ ನಿಯಂತ್ರಕ ಫಲಕವನ್ನು ಕನೆಕ್ಟ್ ಮಾಡಲಾಗಿದೆ. ಆದ್ದರಿಂದ, ಎಡ ಮೋಟರ್ ** GPIO 7 ** ಮತ್ತು ** GPIO 8 ** pin ‌ಗಳಲ್ಲಿರುತ್ತದೆ ಮತ್ತು ಬಲ ಮೋಟರ್ ** GPIO 9 ** ಮತ್ತು ** GPIO 10 ** pin ‌ಗಳಲ್ಲಿರುತ್ತದೆ. ಎಡ ಲೈನ್ ಸೆನ್ಸರ್ **GPIO 17** pin ಅಲ್ಲಿರುತ್ತದೆ ಮತ್ತು ಬಲ ಲೈನ್ ಸೆನ್ಸರ್ **GPIO 27** pin ಅಲ್ಲಿರುತ್ತದೆ.
 
 \--- task \---
 
-Open up **mu** from the Raspberry Pi **Programming** menu, and begin by setting up your motor controller board and your sensors using `gpiozero`:
+Raspberry Pi **Programming** menu ಇಂದ **mu** ತೆರೆಯಿರಿ. ಮೋಟರ್ ನಿಯಂತ್ರಕ ಫಲಕವನ್ನು ಮತ್ತು ಸೆನ್ಸರ್ ಗಳನ್ನು `gpiozero` ಬಳಸಿ ಸೆಟ್ ಮಾಡಿ:
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -18,45 +18,45 @@ right_sensor= LineSensor(27)
 
 \--- /task \---
 
-To begin with, write a really simple line following algorithm, just to test that your robot is working.
+ಮೊದಲಿಗೆ, ನಿಮ್ಮ ರೋಬೋಟ್ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿದೆಯೆ ಎಂದು ಪರೀಕ್ಷಿಸಲು, ಸರಳ ಲೈನ್-ಅನುಸರಿಸುವ ಅಲ್ಗಾರಿತಮ್ ಬರೆಯಿರಿ.
 
-The `gpiozero` module can call a function depending on whether or not a line has been detected. For example:
+`gpiozero` module ಒಂದು ಸಾಲು ಪತ್ತೆಯಾಗಿದೆಯೆ ಅಥವಾ ಇಲ್ಲವೇ ಎಂಬುದನ್ನು ಆಧರಿಸಿ ಒಂದು functionನನ್ನು ಕರೆಯಬಹುದು. ಉದಾಹರಣೆಗೆ:
 
 ```python
 left_sensor.when_line = function_name_to_call
 left_sensor.when_no_line = other_function_name_to_call
 ```
 
-This will tell the robot to do something when the `left_sensor` detects that it is not above a line. By telling the robot to go forward when no line has been detected, but to turn if a line is detected, you can produce very basic line following behavior.
+`left_sensor` ಅದು ಲೈನ್ ಮೇಲೆ ಇಲ್ಲ ಎಂದು ಪತ್ತೆ ಮಾಡಿದಾಗ, ಇದು ರೋಬೋಟ್ ಗೆ ಏನನ್ನಾದರೂ ಮಾಡಲು ಹೇಳುತ್ತದೆ. ಯಾವುದೇ ಲೈನ್ ಪತ್ತೆಯಾಗದಿದ್ದಾಗ ಮುಂದೆ ಹೋಗಲು ಮತ್ತು ಲೈನ್ ಪತ್ತೆಯಾದಾಗ ತಿರುಗಲು, ರೋಬೋಟ್‌ ಗೆ ಹೇಳುವ ಮೂಲಕ, ನೀವು ಸರಳ ಲೈನ್-ಅನುಸರಿಸುವ ಅಲ್ಗಾರಿತಮ್ ಅನ್ನು ರಚಿಸಬಹುದು.
 
 \--- task \---
 
-Add four lines of code to your robot program to produce a basic line following algorithm.
+ಸರಳ ಲೈನ್-ಅನುಸರಿಸುವ ಅಲ್ಗಾರಿತಮ್ ಅನ್ನು ರಚಿಸಲು, ನಿಮ್ಮ ರೋಬೋಟ್ ಪ್ರೋಗ್ರಾಮ್ ಗೆ ನಾಲ್ಕು ಸಾಲುಗಳ ಕೋಡ್ ಸೇರಿಸಿ.
 
 \--- /task \---
 
 \--- hints \--- \--- hint \---
 
-The lines should perform the following tasks:
+ಸಾಲುಗಳು ಈ ಕೆಳಗಿನ ಕಾರ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಬೇಕು:
 
-1. If there's a line under the left sensor, turn left
-2. If there's a line under the right sensor, turn right
-3. If there's no line under the right sensor, drive forwards
-4. If there's no line under the left sensor, drive forwards
+1. ಎಡ ಸೆನ್ಸರ್ ಅಡಿಯಲ್ಲಿ ಒಂದು ಲೈನ್ ಇದ್ದರೆ, ಎಡಕ್ಕೆ ತಿರುಗಿ
+2. ಬಲ ಸೆನ್ಸರ್ ಅಡಿಯಲ್ಲಿ ಒಂದು ಲೈನ್ ಇದ್ದರೆ, ಬಲಕ್ಕೆ ತಿರುಗಿ
+3. ಬಲ ಸೆನ್ಸರ್ ಅಡಿಯಲ್ಲಿ ಒಂದು ಲೈನ್ ಇರದಿದ್ದರೆ, ಮುಂದಕ್ಕೆ ಚಲಿಸಿ
+4. ಎಡ ಸೆನ್ಸರ್ ಅಡಿಯಲ್ಲಿ ಒಂದು ಲೈನ್ ಇರದಿದ್ದರೆ, ಮುಂದಕ್ಕೆ ಚಲಿಸಿ
 
 \--- /hint \--- \--- hint \---
 
-The syntax used in the example program is as follows for the first line:
+ಈ ಉದಾಹರಣೆ ಪ್ರೋಗ್ರಾಮ್ ನಲ್ಲಿ ಮೊದಲ ಸಾಲಿಗೆ ಬಳಸಿದ ವಾಕ್ಯ ರಚನೆ (ಸಿಂಟ್ಯಾಕ್ಸ್) ಈ ಕೆಳಗಿನಂತಿರುತ್ತದೆ:
 
 ```python
 left_sensor.when_line = robot.left
 ```
 
-Now try to complete the remaining three lines.
+ಈಗ ಉಳಿದ ಮೂರು ಸಾಲುಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಪ್ರಯತ್ನಿಸಿ.
 
 \--- /hint \--- \--- hint \---
 
-Here are the four lines of code you need. If you're running your code from the terminal, you'll need to add `pause()` at the end as well.
+ನಿಮಗೆ ಅಗತ್ಯವಿರುವ ಕೋಡ್‌ನ ನಾಲ್ಕು ಸಾಲುಗಳು ಇಲ್ಲಿವೆ. ನೀವು terminal ನಿಂದ ನಿಮ್ಮ code ಅನ್ನು run ಮಾಡುತ್ತಿದ್ದರೆ, `pause()` ಕೊನೆಯಲ್ಲಿ ಸೇರಿಸಿ.
 
 ```python
 left_sensor.when_line = robot.left
@@ -69,6 +69,6 @@ pause()
 
 \--- /hint \--- \--- /hints \---
 
-Don't worry if you're robot tracks off its line a bit. Just observe if it attempts to stay on the line. Here's an example of a robot running on a basic track with this algorithm.
+ನಿಮ್ಮ ರೋಬೋಟ್ ಅದರ ಲೈನ್ ನಿಂದ ಸಲ್ಪ ಹೊರಗೆ ಬಂದರೆ ಚಿಂತಿಸಬೇಡಿ. ಅದು ಲೈನ್ ನಲ್ಲಿ ಉಳಿಯಲು ಪ್ರಯತ್ನಿಸಿದರೆ ಗಮನಿಸಿ. ಈ ಅಲ್ಗಾರಿತಮ್ ಬಳಸಿಕೊಂಡು, ರೋಬೋಟ್ ಸರಳ ಟ್ರ್ಯಾಕ್ ಮೇಲೆ run ಮಾಡುವುದರ ಉದಾಹರಣೆ ಇಲ್ಲಿದೆ.
 
-![final](images/final.gif)
+![ಅಂತಿಮ](images/final.gif)
