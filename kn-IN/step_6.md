@@ -1,37 +1,37 @@
-## Plan a better algorithm
+## ಉತ್ತಮ ಅಲ್ಗಾರಿತಮ್ ಅನ್ನು ಯೋಜಿಸಿ
 
-The previous algorithm might be OK, it can easily be improved upon. Let's see what a better algorithm might look like!
+ಹಿಂದಿನ ಅಲ್ಗಾರಿತಮ್ ಸರಿ ಇರಬಹುದು, ಅದನ್ನು ಸುಲಭವಾಗಿ ಸುಧಾರಿಸಬಹುದು. ಉತ್ತಮ ಅಲ್ಗಾರಿತಮ್ ಹೇಗಿರಬಹುದು ಎಂದು ನೋಡೋಣ!
 
-When a line sensor is above a line, it outputs a `1`. When it's off a line, it outputs a `0`.
+ಲೈನ್ ಸೆನ್ಸರ್ ಲೈನ್ ಮೇಲೆ ಇದ್ದರೆ, ಅದರ output `1`ಆಗಿರುತ್ತದೆ. ಇಲ್ಲದಿದ್ದರೆ, output `0` ಆಗಿರುತ್ತದೆ.
 
-The motors work slightly differently though: the robot, whenever it receives a `1` signal to the right motor, drives that motor forwards. When it receives a `-1`, it drives the motor backwards.
+ಮೋಟರ್‌ಗಳು ಸ್ವಲ್ಪ ವಿಭಿನ್ನವಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ: ಬಲ ಮೋಟರ್ ಯಾವಾಗ `1` ಸಿಗ್ನಲ್ ಪಡೆಯುತ್ತದೆಯೋ, ಆಗ ರೋಬೋಟ್, ಮೋಟರ್ ಅನ್ನು ಮುಂದಕ್ಕೆ ಚಲಿಸುತ್ತದೆ. `-1` ಪಡೆದಾಗ, ಮೋಟರ್ ಅನ್ನು ಹಿಂದಕ್ಕೆ ಚಲಿಸುತ್ತದೆ.
 
-Let's have a look at an algorithm that takes into account the position of the robot, the states of the lines sensors, and the actions required of the motors.
+ರೋಬೋಟ್‌ನ ಸ್ಥಾನ, ಲೈನ್ ಸೆನ್ಸರ್ ಗಳ ಸ್ಥಿತಿಗಳು ಮತ್ತು ಮೋಟರ್‌ಗಳಿಗೆ ಅಗತ್ಯವಾದ ಕ್ರಿಯೆಗಳನ್ನು ಗಣನೆಗೆ ತೆಗೆದುಕೊಳ್ಳುವ ಅಲ್ಗಾರಿತಮ್ ಅನ್ನು ನೋಡೋಣ.
 
-1. The robot is perfectly on the line and should drive forwards:
+1. ರೋಬೋಟ್ ಸಂಪೂರ್ಣವಾಗಿ ಸಾಲಿನಲ್ಲಿದೆ ಮತ್ತು ಮುಂದಕ್ಕೆ ಚಲಿಸಬೇಕು:
     
-    - Both line sensors are off the line and outputting a `0`
-    - Both motors should receive `1` to drive forwards
+    - ಎರಡೂ ಲೈನ್ ಸೆನ್ಸರ್ ಗಳು ಸಾಲಿನಿಂದ ಹೊರಗಿವೆ ಮತ್ತು `0` output ನೀಡುತ್ತಿವೆ
+    - ಎರಡೂ ಮೋಟಾರ್ ಗಳು ಮುಂದಕ್ಕೆ ಚಲಿಸಲು `1` ಸ್ವೀಕರಿಸಬೇಕು
 
-2. The robot has drifted left and needs to turn right:
+2. ರೋಬೋಟ್ ಎಡಕ್ಕೆ ತಿರುಗಿದೆ ಮತ್ತು ಬಲಕ್ಕೆ ತಿರುಗಬೇಕಾಗಿದೆ:
     
-    - The right sensor is on the line and outputting a `1`
-    - The left sensor is off the line and outputting a `0`
-    - The left motor should run backwards and so receive a `-1`
-    - The right motor should run forwards and so receive a `1`
+    - ಬಲ ಸೆನ್ಸರ್ ಲೈನ್ ಮೇಲೆ ಇದೆ ಮತ್ತು `1` output ನೀಡಿತ್ತಿದೆ
+    - ಎಡ ಸೆನ್ಸರ್ ಲೈನ್ ನಿಂದ ಹೊರಗಿದೆ ಮತ್ತು `0` output ನೀಡಿತ್ತಿದೆ
+    - ಎಡ ಮೋಟರ್ ಹಿಂದಕ್ಕೆ ಚಲಿಸಬೇಕು. ಆದ್ದರಿಂದ `-1` ಅನ್ನು ಸ್ವೀಕರಿಸಬೇಕು
+    - ಬಲ ಮೋಟರ್ ಮುಂದಕ್ಕೆ ಚಲಿಸಬೇಕು, ಆದ್ದರಿಂದ `1` ಅನ್ನು ಸ್ವೀಕರಿಸಬೇಕು
 
-3. The robot has drifted right and needs to turn left:
+3. ರೋಬೋಟ್ ಎಡಕ್ಕೆ ತಿರುಗಿದೆ ಮತ್ತು ಬಲಕ್ಕೆ ತಿರುಗಬೇಕಾಗಿದೆ:
     
-    - The right sensor is off the line and outputting a `0`
-    - The left sensor is on the line and outputting a `1`
-    - The Left motor should run forwards and so receive a `1`
-    - The right motor should run backwards and so receive a `-1`
+    - ಬಲ ಸೆನ್ಸರ್ ಲೈನ್ ನಿಂದ ಹೊರಗಿದೆ ಮತ್ತು `0` output ನೀಡಿತ್ತಿದೆ
+    - ಎಡ ಸೆನ್ಸರ್ ಲೈನ್ ಮೇಲೆ ಇದೆ ಮತ್ತು `1` output ನೀಡಿತ್ತಿದೆ
+    - ಎಡ ಮೋಟರ್ ಮುಂದಕ್ಕೆ ಚಲಿಸಬೇಕು, ಆದ್ದರಿಂದ `1` ಅನ್ನು ಸ್ವೀಕರಿಸಬೇಕು
+    - ಬಲ ಮೋಟರ್ ಹಿಂದಕ್ಕೆ ಚಲಿಸಬೇಕು. ಆದ್ದರಿಂದ `-1` ಅನ್ನು ಸ್ವೀಕರಿಸಬೇಕು
 
-How can you make this happen in code? First of all, you'll create an infinite loop to view the sensor values.
+Codeನಲ್ಲಿ ಇದನ್ನು ಹೇಗೆ ಮಾಡಬಹುದು? ಮೊದಲನೆಯದಾಗಿ, ಸೆನ್ಸರ್ ವ್ಯಾಲ್ಯೂ ಗಳನ್ನು ನೋಡಲು infinite loop ಅನ್ನು ರಚಿಸುತ್ತೀರಿ.
 
 \--- task \---
 
-In a new file, add in the following lines of code and run it. Don't forget to adjust the pin numbers if you've used different GPIO pins.
+ಹೊಸ file ‌ನಲ್ಲಿ, ಈ ಕೆಳಗಿನ code ಸಾಲುಗಳನ್ನು ಸೇರಿಸಿ ಅದನ್ನು run ಮಾಡಿ. ನೀವು ಬೇರೆ GPIO pin ಗಳನ್ನು ಬಳಸಿದ್ದರೆ, pin ನಂಬರ್ ಗಳನ್ನು ಸರಿ ಹೊಂದಿಸಲು ಮರೆಯಬೇಡಿ.
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -47,47 +47,45 @@ while True:
     print(left_detect, right_detect)
 ```
 
-Now move the robot back and forth over the line to see what happens.
+ರೋಬೋಟ್ ಅನ್ನು ಲೈನ್ ಮೇಲೆ ಮುಂದಕ್ಕೆ ಹಾಗು ಹಿಂದಕ್ಕೆ ಚಲಿಸಿ ಏನಾಗುತ್ತದೆ ಎಂದು ನೋಡಿ.
 
 \--- /task \---
 
-Hopefully, you should see the binary output from the sensors.
+ಈಗ ನೀವು ಸೆನ್ಸರ್ ಗಳಿಂದ ಬೈನರಿ output ಅನ್ನು ನೋಡಬೇಕು.
 
 ![sensor_output](images/sensor_output.gif)
 
-So now that you have the sensor output, you need to alter it a little before you send it to the motors. As per the algorithm above:
+ಈಗ ನೀವು ಸೆನ್ಸರ್ output ಅನ್ನು ಹೊಂದಿದ್ದೀರಿ, ನೀವು ಅದನ್ನು ಮೋಟರ್‌ಗಳಿಗೆ ಕಳುಹಿಸುವ ಮೊದಲು ಅದನ್ನು ಸ್ವಲ್ಪ ಬದಲಾಯಿಸಬೇಕಾಗಿದೆ. ಮೇಲಿನ ಅಲ್ಗಾರಿತಮ್ ಪ್ರಕಾರ:
 
-- If both sensors output `0`, then both motors should receive `1`
-- If the right sensor outputs `1`, then the left motor should receive `-1`
-- If the left sensor outputs `1`, then the right motor should receive `-1`
+- ಎರಡೂ ಸೆನ್ಸರ್ ಗಳ output `0` ಆಗಿದ್ದರೆ, ಎರಡೂ ಮೋಟಾರ್ ಗಳು `1` ಅನ್ನು ಸ್ವೀಕರಿಸಬೇಕು
+- ಬಲ ಸೆನ್ಸರ್ ನ output `1` ಆಗಿದ್ದರೆ, ಎಡ ಸೆನ್ಸರ್ `-1` ಅನ್ನು ಸ್ವೀಕರಿಸಬೇಕು
+- ಎಡ ಸೆನ್ಸರ್ ನ output `1` ಆಗಿದ್ದರೆ, ಬಲ ಸೆನ್ಸರ್ `-1` ಅನ್ನು ಸ್ವೀಕರಿಸಬೇಕು
 
 \--- task \---
 
-Within the `while True` loop, create two new variables called `left_mot` and `right_mot`. These variables should have the same value that you would like the motors to receive. You can simply print out their values within the loop.
+`while True` loop ಒಳಗೆ,`left_mot` ಮತ್ತು `right_mot` ಎಂಬ ಎರಡು ವೇರಿಯೇಬಲ್ಸ್ ಗಳನ್ನು ರಚಿಸಿ. ಈ ವೇರಿಯೇಬಲ್ಸ್ ಗಳು, ಮೋಟರ್ ಸ್ವೀಕರಿಸಲು ನೀವು ಬಯಸುವ ಅದೇ ವ್ಯಾಲ್ಯೂ ಗಳನ್ನು ಹೊಂದಿರಬೇಕು. Loop ಒಳಗಿರುವ ವ್ಯಾಲ್ಯೂ ಗಳನ್ನು ಮುದ್ರಿಸಬಹುದು.
 
 \--- /task \---
 
 \--- hints \--- \--- hint \---
 
-According to the above algorithm, `if left_detect == 0 and right_detect == 0:`, what do you want the values of `left_mot` and `right_mot` to be?
+ಮೇಲಿನ ಅಲ್ಗಾರಿತಮ್ ಪ್ರಕಾರ, `if left_detect == 0 and right_detect == 0:`,`left_mot` ಮತ್ತು `right_mot` ವ್ಯಾಲ್ಯೂ ಗಳು ನಿಮಗೆ ಏನು ಬೇಕು?
 
 \--- /hint \--- \--- hint \---
 
-Here's the code for the first condition:
+ಮೊದಲ ಕಂಡೀಶನ್ ನ code ಇಲ್ಲಿದೆ:
 
+    ```python
     while True:
         left_detect  = int(left_sensor.value)
         right_detect = int(right_sensor.value)
-        if left_detect == 0 and right_detect == 0:
-            left_mot = 1
-            right_mot = 1
     
 
-You need two more `if` statements to handle the sensors being triggered by a line.
+ಒಂದು ಲೈನ್ ಇಂದ ಟ್ರಿಗರ್ ಆಗುವ ಸೆನ್ಸರ್ ಗಳನ್ನು ನಿರ್ವಹಿಸಲು, ನಿಮಗೆ ಇನ್ನೂ ಎರಡು `if` ಸ್ಟೇಟ್ಮೆಂಟ್ ಗಳು ಬೇಕು.
 
 \--- /hint \--- \--- hint \---
 
-Here's the completed code, with the print statements:
+ಪ್ರಿಂಟ್ ಹೇಳಿಕೆಗಳೊಂದಿಗೆ ಪೂರ್ಣಗೊಂಡ ಕೋಡ್ ಇಲ್ಲಿದೆ:
 
 ```python while True: left_detect = int(left_sensor.value) right_detect = int(right_sensor.value)
 
@@ -109,7 +107,7 @@ Here's the completed code, with the print statements:
 
 \--- task \---
 
-When you are done, run your code and test how it works when you move the robot over the line.
+ನೀವು ಪೂರ್ಣಗೊಳಿಸಿದಾಗ, ನಿಮ್ಮ code ಅನ್ನು run ಮಾಡಿ ಮತ್ತು ರೋಬೋಟ್ ಲೈನ್ ಮೇಲೆ ಚಲಿಸುವಾಗ ಅದು ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದನ್ನು ಪರೀಕ್ಷಿಸಿ.
 
 ![sensor_output2.gif](images/sensor_output2.gif)
 
