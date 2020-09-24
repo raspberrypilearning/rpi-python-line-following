@@ -5,9 +5,9 @@
 <stream class="cloudflare-video" id="6a20279dbfe23651cfe17ebe616b87b7" loop></stream>
 
 --- collapse ---
-
+---
 title: ನಿಮಗೆ ಬೇಕಾದುದು
-
+---
 ## image: images/image
 
 ನಿಮ್ಮ Raspberry Pi Buggy ಜೊತೆಗೆ, ನಿಮಗೆ ಇವುಗಳು ಬೇಕಾಗುತ್ತವೆ:
