@@ -1,12 +1,12 @@
-## The final algorithm
+## ಅಂತಿಮ ಅಲ್ಗಾರಿದಮ್
 
-Now that you are outputting values that the motors can use, it is time to feed these values in.
+ಈಗ ನೀವು ಮೋಟಾರ್ ಉಪಯೋಗಿಸುವ ವ್ಯಾಲ್ಯೂ ಗಳನ್ನು output ಮಾಡುತ್ತಿರುವಿರಿ. ಈಗ ನಿಮ್ಮ ವ್ಯಾಲ್ಯೂ ಗಳನ್ನು ಫೀಡ್ ಮಾಡುವ ಸಮಯ.
 
-To begin with you're going to turn your `while True` loop into a **generator**. A generator is a little like a function, except that it will continually run and only `yield` values when it is asked for them.
+ಮೊದಲಿಗೆ, ನಿಮ್ಮ `while True` loop ಅನ್ನು **generator** ಆಗಿ ಮಾಡಿ. ಜನರೇಟರ್ ಸ್ವಲ್ಪ ಮಟ್ಟಿಗೆ ಒಂದು function. ಆದರೆ, ಅದು ನಿರಂತರವಾಗಿ run ಆಗುತ್ತದೆ ಮತ್ತು ಕೇವಲ ಕೇಳಿದಾಗ `yield` ವ್ಯಾಲ್ಯೂ ಗಳನ್ನು ನೀಡುತ್ತದೆ.
 
 \--- task \---
 
-Turn your loop into a generator like this:
+ನಿಮ್ಮ loop ಅನ್ನು ಈ ರೀತಿಯ ಜನರೇಟರ್ ಆಗಿ ಪರಿವರ್ತಿಸಿ:
 
 ```python
 def motor_speed():
@@ -28,11 +28,11 @@ def motor_speed():
 
 \--- /task \---
 
-Now all you need to do is to say that the `source` of the robot's motor values is going to be the result of the generator.
+ಈಗ ನೀವು ಮಾಡಬೇಕಾಗಿರುವುದು ರೋಬೋಟ್‌ನ ಮೋಟಾರ್ ವ್ಯಾಲ್ಯೂ ಗಳ `source`, ಜನರೇಟರ್‌ನ ಫಲಿತಾಂಶವಾಗಲಿದೆ ಎಂದು ಹೇಳುವುದು.
 
 \--- task \---
 
-Add in this line of code below the generator:
+ಜನರೇಟರ್ ಕೆಳಗೆ ಈ code ಸಾಲನ್ನು ಸೇರಿಸಿ:
 
 ```python
 robot.source = motor_speed()
@@ -40,7 +40,7 @@ robot.source = motor_speed()
 
 \--- /task \---
 
-To make sure that the robot doesn't keep running forever, and to close all the components connections cleanly, you can optionally add in these lines as well:
+ರೋಬೋಟ್ ನಿರಂತರವಾಗಿ run ಆಗದಿರಲು ಮತ್ತು ಎಲ್ಲಾ ಘಟಕಗಳ connection ಗಳನ್ನು ಮುಚ್ಚಲು, ನೀವು ಈ ಸಾಲುಗಳನ್ನು ಸೇರಿಸಬಹುದು:
 
 ```python
 sleep(60)
@@ -53,11 +53,11 @@ right_sensor.close()
 
 \--- task \---
 
-Now run your code and test your robot over a track.
+ಈಗ ನಿಮ್ಮ code ಅನ್ನು run ಮಾಡಿ, ನಿಮ್ಮ ರೋಬೋಟ್ ಅನ್ನು ಟ್ರ್ಯಾಕ್ ಮೂಲಕ ಪರೀಕ್ಷಿಸಿ.
 
 \--- /task \---
 
-Sometimes the robot runs a little too fast, so you can tweak your code a bit as shown in the following completed script. This adds in a speed multiplier to slow the robot down a little.
+ಕೆಲವೊಮ್ಮೆ ರೋಬೋಟ್ ಸ್ವಲ್ಪ ವೇಗವಾಗಿ run ಆಗುತ್ತದೆ. ಆದ್ದರಿಂದ ಈ ಕೆಳಗಿನ ಪೂರ್ಣಗೊಂಡ ಸ್ಕ್ರಿಪ್ಟ್‌ನಲ್ಲಿ ತೋರಿಸಿರುವಂತೆ ನಿಮ್ಮ code ಅನ್ನು ಸ್ವಲ್ಪ ತಿರುಚಬಹುದು. ರೋಬೋಟ್ ಅನ್ನು ಸ್ವಲ್ಪ ನಿಧಾನಗೊಳಿಸಲು ಇದು ಸ್ಪೀಡ್ ಮಲ್ಟಿಪ್ಲೈಯರ್ ಅನ್ನು ಸೇರಿಸುತ್ತದೆ.
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -93,4 +93,4 @@ robot.source = None
 robot.close()
 left_sensor.close()
 right_sensor.close()
-```<video width="640" height="360" controls> <source src="images/showcase.webm" type="video/webm"> Your browser does not support WebM video, so try FireFox or Chrome. </video>
+```<video width="640" height="360" controls> <source src="images/showcase.webm" type="video/webm"> ನಿಮ್ಮ ಬ್ರೌಸರ್ ವೆಬ್‌ಎಂ ವೀಡಿಯೊವನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ, ಆದ್ದರಿಂದ Firefox ಅಥವಾ Chrome ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ. </video>
