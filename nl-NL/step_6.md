@@ -1,104 +1,104 @@
-## Plan a better algorithm
+## Plan een beter algoritme
 
-The previous algorithm might be OK, it can easily be improved upon. Let's see what a better algorithm might look like!
+Het vorige algoritme is misschien in orde, het kan gemakkelijk worden verbeterd. Laten we eens kijken hoe een beter algoritme eruit zou kunnen zien!
 
-When a line sensor is above a line, it outputs a `1`. When it's off a line, it outputs a `0`.
+Wanneer een lijnsensor boven een lijn is, geeft deze een `1`. Wanneer het van een lijn af is, geeft het een `0`.
 
-The motors work slightly differently though: the robot, whenever it receives a `1` signal to the right motor, drives that motor forwards. When it receives a `-1`, it drives the motor backwards.
+De motoren werken echter iets anders: De robot stuurt de rechtermotor naar voren wanneer hij een `1` signaal naar die motor ontvangt. Wanneer het een `-1` ontvangt, stuurt het de motor achteruit.
 
-Let's have a look at an algorithm that takes into account the position of the robot, the states of the lines sensors, and the actions required of the motors.
+Laten we eens kijken naar een algoritme dat rekening houdt met de positie van de robot, de status van de lijnsensoren en de acties die nodig zijn voor de motoren.
 
-1. The robot is perfectly on the line and should drive forwards:
+1. De robot is perfect op de lijn en zou vooruit moeten rijden:
     
-    - Both line sensors are off the line and outputting a `0`
-    - Both motors should receive `1` to drive forwards
+    - Beide lijnsensoren zijn van de lijn en geven een `0`
+    - Beide motoren moeten `1` ontvangen om vooruit te rijden
 
-2. The robot has drifted left and needs to turn right:
+2. De robot is naar links afgeweken en moet naar rechts draaien:
     
-    - The right sensor is on the line and outputting a `1`
-    - The left sensor is off the line and outputting a `0`
-    - The left motor should run backwards and so receive a `-1`
-    - The right motor should run forwards and so receive a `1`
+    - De juiste sensor is op de lijn en geeft een `1`
+    - De linkersensor is van de lijn en geeft een `0`
+    - De linkermotor moet achteruit lopen en dus een `-1` ontvangen
+    - De rechtermotor moet vooruit lopen en dus een `1` ontvangen
 
-3. The robot has drifted right and needs to turn left:
+3. De robot is naar rechts afgeweken en moet naar links draaien:
     
-    - The right sensor is off the line and outputting a `0`
-    - The left sensor is on the line and outputting a `1`
-    - The Left motor should run forwards and so receive a `1`
-    - The right motor should run backwards and so receive a `-1`
+    - De rechtersensor is van de lijn en geeft een `0`
+    - De linkersensor is op de lijn en geeft een `1`
+    - De linkermotor moet vooruit lopen en dus een `1` ontvangen
+    - De rechtermotor moet achteruit lopen en dus een `-1` ontvangen
 
-How can you make this happen in code? First of all, you'll create an infinite loop to view the sensor values.
+Hoe kun je dit in code laten gebeuren? Ten eerste maak je een oneindige lus om de sensorwaarden te bekijken.
 
 \--- task \---
 
-In a new file, add in the following lines of code and run it. Don't forget to adjust the pin numbers if you've used different GPIO pins.
+Voeg in een nieuw bestand de volgende regels code toe en voer het uit. Vergeet niet om de pinnummers aan te passen als je verschillende GPIO-pinnen hebt gebruikt.
 
 ```python
 from gpiozero import Robot, LineSensor
 from time import sleep
 
 robot = Robot(left=(7, 8), right=(9, 10)) 
-left_sensor = LineSensor(17)
-right_sensor= LineSensor(27)
+linker_sensor = LineSensor(17)
+rechter_sensor= LineSensor(27)
 
 while True:
-    left_detect  = int(left_sensor.value)
-    right_detect = int(right_sensor.value)
-    print(left_detect, right_detect)
+    links_detectie = int(linker_sensor.value)
+    rechts_detectie = int(rechter_sensor.value)
+    print(links_detectie, rechts_detectie)
 ```
 
-Now move the robot back and forth over the line to see what happens.
+Beweeg de robot nu heen en weer over de lijn om te zien wat er gebeurt.
 
 \--- /task \---
 
-Hopefully, you should see the binary output from the sensors.
+Hopelijk zou je de binaire output van de sensoren moeten zien.
 
-![sensor_output](images/sensor_output.gif)
+![sensor_uitvoer](images/sensor_output.gif)
 
-So now that you have the sensor output, you need to alter it a little before you send it to the motors. As per the algorithm above:
+Dus nu je de sensoruitvoer hebt, moet je het een beetje veranderen voordat je het naar de motoren stuurt. Volgens het bovenstaande algoritme:
 
-- If both sensors output `0`, then both motors should receive `1`
-- If the right sensor outputs `1`, then the left motor should receive `-1`
-- If the left sensor outputs `1`, then the right motor should receive `-1`
+- Als beide sensoren `0` uitvoeren, moeten beide motoren `1` ontvangen
+- Als de rechtersensor `1` uitvoert, moet de linkermotor `-1` ontvangen
+- Als de linkersensor `1` uitvoert, moet de rechtermotor `-1` ontvangen
 
 \--- task \---
 
-Within the `while True` loop, create two new variables called `left_mot` and `right_mot`. These variables should have the same value that you would like the motors to receive. You can simply print out their values within the loop.
+Maak binnen de `while True`-lus twee nieuwe variabelen met de naam `linker_motor` en `rechter_motor`. Deze variabelen moeten dezelfde waarde hebben die je wilt dat de motoren ontvangen. Je kunt hun waarden gewoon binnen de lus afdrukken.
 
 \--- /task \---
 
 \--- hints \--- \--- hint \---
 
-According to the above algorithm, `if left_detect == 0 and right_detect == 0:`, what do you want the values of `left_mot` and `right_mot` to be?
+Volgens het bovenstaande algoritme, `if links_detectie == 0 and rechts_detectie == 0:`, wat wil je dan dat de waarden van `linker_motor` en `rechter_motor` zijn?
 
 \--- /hint \--- \--- hint \---
 
-Here's the code for the first condition:
+Hier is de code voor de eerste voorwaarde:
 
     while True:
-        left_detect  = int(left_sensor.value)
-        right_detect = int(right_sensor.value)
-        if left_detect == 0 and right_detect == 0:
-            left_mot = 1
-            right_mot = 1
+        links_detectie = int(linker_sensor.value)
+        rechts_detectie = int(rechter_sensor.value)
+        if links_detectie == 0 and rechts_detectie == 0:
+            linker_motor = 1
+            rechter_motor = 1
     
 
-You need two more `if` statements to handle the sensors being triggered by a line.
+Je hebt nog twee `if` statements nodig om de sensoren te verwerken die door een lijn worden geactiveerd.
 
 \--- /hint \--- \--- hint \---
 
-Here's the completed code, with the print statements:
+Hier is de voltooide code, met het print statement:
 
-```python while True: left_detect = int(left_sensor.value) right_detect = int(right_sensor.value)
+```python while True: links_detectie = int(linker_sensor.value) rechts_detectie = int(rechter_sensor.value)
 
-    if left_detect == 0 and right_detect == 0:
-        left_mot = 1
-        right_mot = 1
+    if links_detectie  == 0 and rechts_detectie == 0:
+        linker_motor = 1
+        rechter_motor = 1
     
-    if left_detect == 0 and right_detect == 1:
-        left_mot = -1
-    if left_detect == 1 and right_detect == 0:
-        right_mot = -1
+    if links_detectie  == 0 and rechts_detectie == 1:
+        linker_motor = -1
+    if links_detectie  == 1 and rechts_detectie == 0:
+        rechter_motor = -1
     
     print(right_mot, left_mot)
     
@@ -109,7 +109,7 @@ Here's the completed code, with the print statements:
 
 \--- task \---
 
-When you are done, run your code and test how it works when you move the robot over the line.
+Wanneer je klaar bent, voer je code uit en test je hoe het werkt wanneer je de robot over de lijn beweegt.
 
 ![sensor_output2.gif](images/sensor_output2.gif)
 
