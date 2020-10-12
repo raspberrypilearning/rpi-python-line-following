@@ -1,31 +1,31 @@
-## Test the line sensors
+## Test de lijnsensoren
 
-Next you're going to test whether your line sensors are working, and you'll tune them a little.
+Vervolgens ga je testen of je lijnsensoren werken, en je zult ze een beetje afstellen.
 
 \--- task \---
 
-With the line sensor attached, boot up your Raspberry Pi.
+Start de Raspberry Pi op met de lijnsensor aangesloten.
 
 \--- /task \---
 
 \--- task \---
 
-Cut two small holes in the bottom of your buggy so that the sensor can view the line beneath it, and secure your sensors in place.
+Knip twee kleine gaten in de onderkant van je buggy zodat de sensor de lijn eronder kan zien en zet je sensoren vast.
 
-![through-hole](images/throughhole.jpg)
+![doorgaand gat](images/throughhole.jpg)
 
 \--- /task \---
 
-When the sensors pass over a dark line, the LED on the sensor board should turn off.
+Wanneer de sensoren een donkere lijn passeren, moet de LED op de sensorkaart uit gaan.
 
-![tune](images/tune.gif)
+![stel af](images/tune.gif)
 
 \--- task \---
 
-Use the small potentiometer on the board to tune your sensors, so that the LEDs turns off when over a dark line, and lights up when over white space.
+Gebruik de kleine potentiometer op het bord om je sensoren af te stellen, zodat de LED's boven een donkere lijn uit gaan en boven een witte ruimte gaan branden.
 
-![tune](images/tune.jpg)
+![stel af](images/tune.jpg)
 
 \--- /task \---
 
-Once you have tuned the sensors, you can proceed to programming your robot.
+Nadat je de sensoren hebt afgesteld, kun je doorgaan met het programmeren van je robot.
