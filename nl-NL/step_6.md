@@ -75,14 +75,14 @@ Volgens het bovenstaande algoritme, `if links_detectie == 0 and rechts_detectie 
 --- /hint --- --- hint ---
 
 Hier is de code voor de eerste voorwaarde:
-
+```
     while True:
         links_detectie = int(linker_sensor.value)
         rechts_detectie = int(rechter_sensor.value)
         if links_detectie == 0 and rechts_detectie == 0:
             linker_motor = 1
             rechter_motor = 1
-    
+```    
 
 Je hebt nog twee `if` statements nodig om de sensoren te verwerken die door een lijn worden geactiveerd.
 
@@ -90,7 +90,11 @@ Je hebt nog twee `if` statements nodig om de sensoren te verwerken die door een 
 
 Hier is de voltooide code, met het print statement:
 
-```python while True: links_detectie = int(linker_sensor.value) rechts_detectie = int(rechter_sensor.value)
+```python 
+
+while True: 
+    links_detectie = int(linker_sensor.value) 
+    rechts_detectie = int(rechter_sensor.value)
 
     if links_detectie  == 0 and rechts_detectie == 0:
         linker_motor = 1
@@ -102,8 +106,6 @@ Hier is de voltooide code, met het print statement:
         rechter_motor = -1
     
     print(right_mot, left_mot)
-    
-
 ```
 
 --- /hint ------ /hints ---
