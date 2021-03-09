@@ -5,10 +5,10 @@ Dans cette ressource, tu vas transformer ton robot buggy en un robot buggy qui s
 <stream class="cloudflare-video" id="6a20279dbfe23651cfe17ebe616b87b7" loop></stream>
 
 --- collapse ---
-
+---
 title: Ce qu'il faut avoir
-
-## image: images/image
+image: images/image
+---
 
 En plus de ton buggy Raspberry Pi, tu auras besoin :
 
