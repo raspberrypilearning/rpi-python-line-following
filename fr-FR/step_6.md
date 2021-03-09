@@ -90,7 +90,10 @@ Tu as besoin de deux autres `if` pour gérer les capteurs déclenchés par une l
 
 Voici le code terminé, avec les instructions d'impression :
 
-```python while True: left_detect = int(left_sensor.value) right_detect = int(right_sensor.value)
+```python 
+while True: 
+    left_detect = int(left_sensor.value) 
+    right_detect = int(right_sensor.value)
 
     if left_detect == 0 and right_detect == 0:
         left_mot = 1
