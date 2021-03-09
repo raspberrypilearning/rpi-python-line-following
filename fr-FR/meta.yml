@@ -1,0 +1,25 @@
+---
+title: Construire un robot suivant une ligne
+hero_image: images/banner.png
+description: Faire en sorte que ton robot buggy suive une piste par lui-même
+theme: red   #possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+duration: 3
+version: 4.01
+listed: true
+ingredient: false
+copyedit: true
+last_tested: "2018-04-10"
+curriculum: 3, design-0, programming-3, phys-comp-3, manufacture-2, community-0
+interests: "robotics"
+technologies: "electronic-components, raspberry-pi, python"
+hardware: "electronic-components, raspberry-pi"
+software: "python"
+site_areas: projects
+steps:
+  - title: Introduction
+  - title: Préparer les connecteurs
+  - title: Connecter les capteurs de ligne
+  - title: Tester les capteurs de lignes
+  - title: Programmer un algorithme de suivi de ligne
+  - title: Élaborer un meilleur algorithme
+  - title: L'algorithme final
