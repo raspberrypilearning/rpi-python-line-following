@@ -1,10 +1,10 @@
-## Programming a line following algorithm
+## برمجة خوارزمية تتبع الخط
 
-**Note:** In this example, the motor controller board is connected so that the left motor is on pins **GPIO 7** and **GPIO 8**, and the right motor is on pins **GPIO 9** and **GPIO 10**. The left line sensor is on pin **GPIO 17**, and the right line sensor is on pin **GPIO 27**.
+**ملاحظة:** في هذا المثال، لوحة تحكم المحركات متصلة بحيث يكون المحرك الأيسر على دبابيس **GPIO 7** و **GPIO 8**، والمحرك الأيمن على دبابيس **GPIO 9** و **GPIO 10**. حساس الخط الأيسر على **GPIO 17** pin، وحساس الخط الأيمن على **GPIO 27** pin.
 
 \--- task \---
 
-Open up **mu** from the Raspberry Pi **Programming** menu, and begin by setting up your motor controller board and your sensors using `gpiozero`:
+افتح **mu** من قائمة **programming ** لل Raspberry Pi، وابدأ بإعداد لوحة تحكم المحرك وأجهزة التحسس الخاصة بك باستخدام `gpiozero`:
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -18,45 +18,45 @@ right_sensor= LineSensor(27)
 
 \--- /task \---
 
-To begin with, write a really simple line following algorithm, just to test that your robot is working.
+لنبدأ بكتابة خوارزمية بسيطه حقاً لتتبع الخط ، فقط لاختبار أن الروبوت الخاص بك يعمل.
 
-The `gpiozero` module can call a function depending on whether or not a line has been detected. For example:
+يمكن لوحدة `gpiozero` استدعاء دالة اعتماداً على ما إذا كان قد تم اكتشاف خط أم لا. مثال:
 
 ```python
 left_sensor.when_line = function_name_to_call
 left_sensor.when_no_line = other_function_name_to_call
 ```
 
-This will tell the robot to do something when the `left_sensor` detects that it is not above a line. By telling the robot to go forward when no line has been detected, but to turn if a line is detected, you can produce very basic line following behavior.
+هذه الخوارزميه ستخبر الروبوت بعمل شيء عندما يكتشف `الحساس الأيسر` أنه ليس فوق سطر. من خلال إخبار الروبوت بالمضي قدمًا في حالة عدم اكتشاف أي خط ، ولكن بالأستدارة إذا تم اكتشاف خط ، يمكنك إنتاج سلوك تتبع خط أساسي للغاية.
 
 \--- task \---
 
-Add four lines of code to your robot program to produce a basic line following algorithm.
+أضف أربعة أسطر برمجية إلى برنامج الروبوت الخاص بك لإنتاج خوارزمية تتبع خط أساسية.
 
 \--- /task \---
 
 \--- hints \--- \--- hint \---
 
-The lines should perform the following tasks:
+الأسطر البرمجية يجب أن تنفذ المهام التالية:
 
-1. If there's a line under the left sensor, turn left
-2. If there's a line under the right sensor, turn right
-3. If there's no line under the right sensor, drive forwards
-4. If there's no line under the left sensor, drive forwards
+1. إذا كان هنالك خط أسفل الحساس الأيسر ، أستدر يسارًا
+2. إذا كان هنالك خط أسفل الحساس الأيمن ، أستدر يميناً
+3. إذا لم يكن هنالك خط أسفل الحساس الأيمن ، قم بالقيادة للأمام
+4. إذا لم يكن هنالك خط أسفل الحساس الأيسر ، قم بالقيادة للأمام
 
 \--- /hint \--- \--- hint \---
 
-The syntax used in the example program is as follows for the first line:
+الصيغة المستخدمة في برنامج المثال هي كما يلي بالنسبة للسطر الأول:
 
 ```python
 left_sensor.when_line = robot.left
 ```
 
-Now try to complete the remaining three lines.
+الآن حاول إكمال الأسطر الثلاثة المتبقية.
 
 \--- /hint \--- \--- hint \---
 
-Here are the four lines of code you need. If you're running your code from the terminal, you'll need to add `pause()` at the end as well.
+فيما يلي الأسطر البرمجية الأربعة التي تحتاجها. إذا كنت تقوم بتشغيل الأسطر البرمجية الخاصة بك من المحطة الطرفية، فستحتاج أيضاً إلى إضافة `()pause` في النهاية.
 
 ```python
 left_sensor.when_line = robot.left
@@ -69,6 +69,6 @@ pause()
 
 \--- /hint \--- \--- /hints \---
 
-Don't worry if you're robot tracks off its line a bit. Just observe if it attempts to stay on the line. Here's an example of a robot running on a basic track with this algorithm.
+لا تقلق إذا خرج الروبوت الخاص بك خارج خطه قليلاً. فقط لاحظ إذا ما كان يحاول البقاء على الخط. هنا مثال لروبوت يعمل على مسار أساسي مع هذه الخوارزمية.
 
-![final](images/final.gif)
+![نهائي](images/final.gif)
