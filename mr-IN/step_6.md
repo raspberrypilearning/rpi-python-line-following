@@ -1,37 +1,37 @@
-## Plan a better algorithm
+## चांगल्या अल्गोरिदमची योजना करा
 
-The previous algorithm might be OK, it can easily be improved upon. Let's see what a better algorithm might look like!
+मागील अल्गोरिदम कदाचित ठीक आहे, त्यावर सहज सुधारणा केली जाऊ शकते. चला तर चांगले अल्गोरिदम कसे लिहायचे ते पाहूया!
 
-When a line sensor is above a line, it outputs a `1`. When it's off a line, it outputs a `0`.
+जेव्हा लाइन सेन्सर एका रेषाच्या वर असेल तेव्हा ते आउटपुट `1` असा देतो. जेव्हा लाइन सेन्सर एका रेषाच्या वर असेल तेव्हा ते आउटपुट `0` असा देतो.
 
-The motors work slightly differently though: the robot, whenever it receives a `1` signal to the right motor, drives that motor forwards. When it receives a `-1`, it drives the motor backwards.
+मोटर्स काहीसे वेगळ्या पद्धतीने कार्य करतात: रोबोट जेव्हा जेव्हा </code>1</0> आउटपुट मोटारला सिग्नल देतो, त्या मोटारीला पुढे चालवतो. जेव्हा मोटारला `-1` प्राप्त होते, ती मोटार मागे सरकवते.
 
-Let's have a look at an algorithm that takes into account the position of the robot, the states of the lines sensors, and the actions required of the motors.
+चला रोबोटची स्थिती, रेषाच्या सेन्सरची स्थिती आणि मोटर्ससाठी आवश्यक असणारी कृती विचारात घेतलेल्या अल्गोरिदम वर एक नजर टाकू.
 
-1. The robot is perfectly on the line and should drive forwards:
+1. रोबोट उत्तम प्रकारे मार्गावर आहे आणि पुढे जायला पाहिजे:
     
-    - Both line sensors are off the line and outputting a `0`
-    - Both motors should receive `1` to drive forwards
+    - दोन्ही लाइन सेन्सर ओळीबाहेर आहेत आणि आउटपुट ` 0`आहे
+    - दोन्ही मोटर्सना `1` प्राप्त झाले पाहिजे पुढे चालायला
 
-2. The robot has drifted left and needs to turn right:
+2. रोबोट डावीकडे वळला आहे आणि आता उजवीकडे वळावे लागेल:
     
-    - The right sensor is on the line and outputting a `1`
-    - The left sensor is off the line and outputting a `0`
-    - The left motor should run backwards and so receive a `-1`
-    - The right motor should run forwards and so receive a `1`
+    - दोन्ही लाइन सेन्सर ओळीबाहेर आहेत आणि आउटपुट (बाह्य संदेश) `1` आहे
+    - दोन्ही लाइन सेन्सर ओळीबाहेर आहेत आणि आउटपुट `0`आहे
+    - डावी मोटर मागील दिशेने धावली पाहिजे आणि म्हणून ` -1 `प्राप्त झाली पाहिजे
+    - डावी मोटर मागील दिशेने धावली पाहिजे आणि म्हणून ` -1 ` प्राप्त झाली पाहिजे
 
-3. The robot has drifted right and needs to turn left:
+3. रोबोट डावीकडे वळला आहे आणि आता उजवीकडे वळावे लागेल:
     
-    - The right sensor is off the line and outputting a `0`
-    - The left sensor is on the line and outputting a `1`
-    - The Left motor should run forwards and so receive a `1`
-    - The right motor should run backwards and so receive a `-1`
+    - दोन्ही लाइन सेन्सर ओळीबाहेर आहेत आणि आउटपुट ` 0`आहे
+    - दोन्ही लाइन सेन्सर ओळीबाहेर आहेत आणि आउटपुट ` 1` आहे
+    - डावी मोटर मागील दिशेने धावली पाहिजे आणि म्हणून `-1` प्राप्त झाली पाहिजे
+    - डावी मोटर मागील दिशेने धावली पाहिजे आणि म्हणून `-1` प्राप्त झाली पाहिजे
 
-How can you make this happen in code? First of all, you'll create an infinite loop to view the sensor values.
+आपण कोडमध्ये हे कसे घडवून आणू शकता? सर्व प्रथम, आपण सेन्सर मूल्ये पाहण्यासाठी एक infinite(अनंत) loop तयार कराल.
 
 \--- task \---
 
-In a new file, add in the following lines of code and run it. Don't forget to adjust the pin numbers if you've used different GPIO pins.
+नवीन file(फाईल) मध्ये, कोडच्या खालील ओळी जोडा आणि त्या चालवा. आपण भिन्न GPIO पिन वापरल्यास पिन क्रमांक समायोजित करण्यास विसरू नका.
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -47,33 +47,33 @@ while True:
     print(left_detect, right_detect)
 ```
 
-Now move the robot back and forth over the line to see what happens.
+आता काय होते ते पाहण्यासाठी रोबोटला मागे व पुढे सरकवा.
 
 \--- /task \---
 
-Hopefully, you should see the binary output from the sensors.
+आपण सेन्सर्सकडून बायनरी आउटपुट मिळेल अशी आशा करू शकता.
 
 ![sensor_output](images/sensor_output.gif)
 
-So now that you have the sensor output, you need to alter it a little before you send it to the motors. As per the algorithm above:
+आता आपल्याकडे सेन्सर आउटपुट आहे, म्हणून मोटर्सवर पाठविण्यापूर्वी आपण त्यास थोडेसे बदल करायची आवश्यकता आहे. वरील अल्गोरिदमनुसार:
 
-- If both sensors output `0`, then both motors should receive `1`
-- If the right sensor outputs `1`, then the left motor should receive `-1`
-- If the left sensor outputs `1`, then the right motor should receive `-1`
+- जर दोन्ही सेन्सर आउटपुट `0`, नंतर दोन्ही मोटर्स `1` प्राप्त झाली पाहिजे
+- उजव्या सेन्सर आउटपुट `1`झाल्यास, नंतर डावे मोटर `-1` प्राप्त झाली पाहिजे
+- डावे सेन्सर आउटपुट `1`झाल्यास, नंतर उजव्या मोटर `-1` प्राप्त झाली पाहिजे
 
 \--- task \---
 
-Within the `while True` loop, create two new variables called `left_mot` and `right_mot`. These variables should have the same value that you would like the motors to receive. You can simply print out their values within the loop.
+</code> while True`लूप दोन नवीन व्हेरिएबल्स तयार करतो <code> left_mot`आणि`right_mot`. या व्हेरिएबलचे मूल्य व मोटर्स कडून प्राप्त झालेले सारखे असले पाहिजे. आपण त्यांची व्हॅल्यू loop मध्ये प्रिंट करू शकता.
 
 \--- /task \---
 
 \--- hints \--- \--- hint \---
 
-According to the above algorithm, `if left_detect == 0 and right_detect == 0:`, what do you want the values of `left_mot` and `right_mot` to be?
+वरील अल्गोरिदम नुसार `if left_detect == 0 and right_detect == 0`, आपल्याला `left_mot` and `right_mot` काय मूल्ये हवी आहेत?
 
 \--- /hint \--- \--- hint \---
 
-Here's the code for the first condition:
+पहिल्या अटसाठी कोड येथे आहेः:
 
     while True:
         left_detect  = int(left_sensor.value)
@@ -83,11 +83,11 @@ Here's the code for the first condition:
             right_mot = 1
     
 
-You need two more `if` statements to handle the sensors being triggered by a line.
+आपल्याला आणखी दोन `if` स्टेटमेंट्स आवश्यक आहेत सेन्सर्स रेषेत चालण्यासाठी.
 
 \--- /hint \--- \--- hint \---
 
-Here's the completed code, with the print statements:
+प्रिंट स्टेटमेन्टसह पूर्ण केलेला कोड:
 
 ```python while True: left_detect = int(left_sensor.value) right_detect = int(right_sensor.value)
 
@@ -103,13 +103,13 @@ Here's the completed code, with the print statements:
     print(right_mot, left_mot)
     
 
-```
+`` `
 
 \--- /hint \--- \--- /hints \---
 
 \--- task \---
 
-When you are done, run your code and test how it works when you move the robot over the line.
+पूर्ण झाल्यावर आपला कोड चालवा आणि आपण रोबोट लाईनवर चालते ते कसे कार्य करते याची चाचणी घ्या.
 
 ![sensor_output2.gif](images/sensor_output2.gif)
 
