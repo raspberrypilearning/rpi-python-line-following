@@ -1,12 +1,12 @@
-## The final algorithm
+## अंतिम अल्गोरिदम
 
-Now that you are outputting values that the motors can use, it is time to feed these values in.
+मोटर्स वापरू शकतील अशी व्हॅल्यूज आऊटपुट करत असताना आता या व्हॅल्यूज feed (पुरवणे) करायची वेळ आली आहे.
 
-To begin with you're going to turn your `while True` loop into a **generator**. A generator is a little like a function, except that it will continually run and only `yield` values when it is asked for them.
+सुरूवातीस आपण आपले `while True` लूप ** generator** (जनरेटर) मध्ये जोडा. जनरेटर हे थोडेसे फंक्शनसारखे असते, हे सतत चालते आणि केवळ ` yield ` मूल्य विचारले जाते तेव्हाच मूल्ये देते.
 
 \--- task \---
 
-Turn your loop into a generator like this:
+याप्रमाणे जनरेटरमध्ये आपला लूप बदला:
 
 ```python
 def motor_speed():
@@ -28,11 +28,11 @@ def motor_speed():
 
 \--- /task \---
 
-Now all you need to do is to say that the `source` of the robot's motor values is going to be the result of the generator.
+आता आपल्याला फक्त असे म्हणायचे आहे की `source` रोबोटच्या मोटर व्हॅल्यूज जनरेटर व्हॅल्यूजचा परिणाम असेल.
 
 \--- task \---
 
-Add in this line of code below the generator:
+जनरेटरच्या खाली या ओळीत code जोडा:
 
 ```python
 robot.source = motor_speed()
@@ -40,7 +40,7 @@ robot.source = motor_speed()
 
 \--- /task \---
 
-To make sure that the robot doesn't keep running forever, and to close all the components connections cleanly, you can optionally add in these lines as well:
+रोबोट कायमचा चालू राहणार नाही हे सुनिश्चित करण्यासाठी आणि सर्व घटक कनेक्शन बंद करण्यासाठी आपण या ओळींमध्ये या ओळी देखील जोडू शकता:
 
 ```python
 sleep(60)
@@ -53,14 +53,14 @@ right_sensor.close()
 
 \--- task \---
 
-Now run your code and test your robot over a track.
+आता आपला code चालवा आणि ट्रॅकवर आपल्या रोबोटची चाचणी घ्या.
 
 \--- /task \---
 
-Sometimes the robot runs a little too fast, so you can tweak your code a bit as shown in the following completed script. This adds in a speed multiplier to slow the robot down a little.
+कधीकधी रोबोट थोडा वेगात धावतो, जेणेकरून आपण पुढील पूर्ण झालेल्या स्क्रिप्टमध्ये दर्शविल्यानुसार आपला कोड थोडा बदल करू शकता. वेग गुणक रोबोट चा वेग थोडेसे कमी करण्यासाठी मदत करू शकता.
 
 ```python
-from gpiozero import Robot, LineSensor
+rom gpiozero import Robot, LineSensor
 from time import sleep
 
 robot = Robot(left=(7, 8), right=(9, 10)) 
@@ -78,19 +78,4 @@ def motor_speed():
             left_mot = 1
             right_mot = 1
         ## Stage 2
-        if left_detect == 0 and right_detect == 1:
-            left_mot = -1
-        if left_detect == 1 and right_detect == 0:
-            right_mot = -1
-        #print(r, l)
-        yield (right_mot * speed, left_mot * speed)
-
-robot.source = motor_speed()
-
-sleep(60)
-robot.stop()
-robot.source = None
-robot.close()
-left_sensor.close()
-right_sensor.close()
-```<video width="640" height="360" controls> <source src="images/showcase.webm" type="video/webm"> Your browser does not support WebM video, so try FireFox or Chrome. </video>
+```<video width="640" height="360" controls> <source src="images/showcase.webm" type="video/webm"> आपला ब्राउझर वेबएम व्हिडिओस समर्थन देत नाही, म्हणून FireFox किंवा Chrome वापरून पहा. </video>
