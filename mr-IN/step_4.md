@@ -1,31 +1,31 @@
-## Test the line sensors
+## लाईन्स सेन्सरची चाचणी घ्या
 
-Next you're going to test whether your line sensors are working, and you'll tune them a little.
+पुढे आपण आपले लाईन सेन्सर्स कार्यरत आहेत की नाही याची चाचणी घेणार आहात आणि आपण त्यांना थोडे ट्यून कराल.
 
 \--- task \---
 
-With the line sensor attached, boot up your Raspberry Pi.
+लाइन सेन्सर जोडल्यामुळे, आपला Raspberry Pi बूट करा.
 
 \--- /task \---
 
 \--- task \---
 
-Cut two small holes in the bottom of your buggy so that the sensor can view the line beneath it, and secure your sensors in place.
+आपल्या बग्गीच्या तळाशी दोन लहान छिद्रे कापून घ्या जेणेकरून सेन्सर त्याच्या खाली असलेली लाईन पाहू शकेल आणि आपले सेन्सर त्या जागी व्यवस्थित ठेवा.
 
-![through-hole](images/throughhole.jpg)
+![छिद्रातून](images/throughhole.jpg)
 
 \--- /task \---
 
-When the sensors pass over a dark line, the LED on the sensor board should turn off.
+जेव्हा सेन्सर्स गडद रेषेतून जातात तेव्हा सेन्सर बोर्डवरील LED बंद करावा.
 
-![tune](images/tune.gif)
+![ट्युन करा](images/tune.gif)
 
 \--- task \---
 
-Use the small potentiometer on the board to tune your sensors, so that the LEDs turns off when over a dark line, and lights up when over white space.
+आपल्या सेन्सर्सला ट्यून करण्यासाठी फळावरील लहान पोटॅटीओमीटर वापरा, जेणेकरून गडद रेषा ओलांडून LED बंद होतील आणि पांढर्‍या जागेवर प्रकाश पडेल.
 
-![tune](images/tune.jpg)
+![ट्युन करा](images/tune.jpg)
 
 \--- /task \---
 
-Once you have tuned the sensors, you can proceed to programming your robot.
+एकदा आपण सेन्सर ट्यून केल्यावर आपण आपल्या रोबोट प्रोग्रामिंगकडे जाऊ शकता.
