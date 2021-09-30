@@ -1,23 +1,23 @@
-## The final algorithm
+## الخوارزمية النهائية
 
-Now that you are outputting values that the motors can use, it is time to feed these values in.
+الآن أنت تخرج القيم التي يمكن للمحركات استخدامها، لذا حان الوقت لتغذية هذه القيم فيها.
 
-To begin with you're going to turn your `while True` loop into a **generator**. A generator is a little like a function, except that it will continually run and only `yield` values when it is asked for them.
+لتبدأ ، ستقوم بتحويل الحلقة التكرارية `while True ` إلى **مولد**. المولد يشبه الدالة قليلاً, باستثناء أنه سيبقى يعمل بشكل مستمر و فقط `ينتج` قيم عندما يطلب منه ذلك.
 
 \--- task \---
 
-Turn your loop into a generator like this:
+حول الحلقة التكرارية إلى مولد كالتالي:
 
 ```python
 def motor_speed():
     while True:
         left_detect  = int(left_sensor.value)
         right_detect = int(right_sensor.value)
-        ## Stage 1
+        ## المرحلة 1
         if left_detect == 0 and right_detect == 0:
             left_mot = 1
             right_mot = 1
-        ## Stage 2
+        ## المرحلة 2
         if left_detect == 0 and right_detect == 1:
             left_mot = -1
         if left_detect == 1 and right_detect == 0:
@@ -28,11 +28,11 @@ def motor_speed():
 
 \--- /task \---
 
-Now all you need to do is to say that the `source` of the robot's motor values is going to be the result of the generator.
+الآن كل ما عليك فعله هو أن تقول أن `المصدر` لقيم محرك الروبوت ستكون نتيجة المولد.
 
 \--- task \---
 
-Add in this line of code below the generator:
+أضف هذا السطر من الكود أسفل المولد:
 
 ```python
 robot.source = motor_speed()
@@ -40,7 +40,7 @@ robot.source = motor_speed()
 
 \--- /task \---
 
-To make sure that the robot doesn't keep running forever, and to close all the components connections cleanly, you can optionally add in these lines as well:
+للتأكد من أن الروبوت لا يستمر في العمل إلى الأبد ، ولإغلاق جميع أتصالات المكونات بشكل نظيف ، يمكنك أيضاً إضافة هذه السطور اختياريًا:
 
 ```python
 sleep(60)
@@ -53,11 +53,11 @@ right_sensor.close()
 
 \--- task \---
 
-Now run your code and test your robot over a track.
+الآن قم بتشغيل الكود الخاص بك واختبر الروبوت الخاص بك على مسار.
 
 \--- /task \---
 
-Sometimes the robot runs a little too fast, so you can tweak your code a bit as shown in the following completed script. This adds in a speed multiplier to slow the robot down a little.
+في بعض الأحيان يعمل الروبوت بسرعة كبيرة، لذا يمكنك تعديل التعليمات البرمجية قليلاً كما هو موضح في الكود الكامل التالي. هذا يضيف سرعة مضاعفة لإبطاء الروبوت قليلاً.
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -73,11 +73,11 @@ def motor_speed():
     while True:
         left_detect  = int(left_sensor.value)
         right_detect = int(right_sensor.value)
-        ## Stage 1
+        ## المرحلة 1
         if left_detect == 0 and right_detect == 0:
             left_mot = 1
             right_mot = 1
-        ## Stage 2
+        ## المرحلة 2
         if left_detect == 0 and right_detect == 1:
             left_mot = -1
         if left_detect == 1 and right_detect == 0:
@@ -93,4 +93,4 @@ robot.source = None
 robot.close()
 left_sensor.close()
 right_sensor.close()
-```<video width="640" height="360" controls> <source src="images/showcase.webm" type="video/webm"> Your browser does not support WebM video, so try FireFox or Chrome. </video>
+```<video width="640" height="360" controls> <source src="images/showcase.webm" type="video/webm"> لا يدعم متصفحك فيديو WebM ، لذلك جرّب FireFox أو Chrome. </video>
