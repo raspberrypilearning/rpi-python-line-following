@@ -1,10 +1,10 @@
-## Programming a line following algorithm
+## Programmer un algorithme de suivi de ligne
 
-**Note:** In this example, the motor controller board is connected so that the left motor is on pins **GPIO 7** and **GPIO 8**, and the right motor is on pins **GPIO 9** and **GPIO 10**. The left line sensor is on pin **GPIO 17**, and the right line sensor is on pin **GPIO 27**.
+**Remarque :** Dans cet exemple, la carte du contrôleur moteur est connectée de sorte que le moteur gauche soit sur des broches **GPIO 7** et **GPIO 8**, et le moteur droit est sur des broches **GPIO 9** et **GPIO 10**. Le capteur de la ligne gauche est sur la broche **GPIO 17**, et le capteur de la ligne droite est sur la broche **GPIO 27**.
 
 \--- task \---
 
-Open up **mu** from the Raspberry Pi **Programming** menu, and begin by setting up your motor controller board and your sensors using `gpiozero`:
+Ouvre **mu** depuis le menu Raspberry Pi **Programmation** et commence par configurer ta carte contrôleur de moteur et tes capteurs en utilisant `gpiozero` :
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -18,45 +18,45 @@ right_sensor= LineSensor(27)
 
 \--- /task \---
 
-To begin with, write a really simple line following algorithm, just to test that your robot is working.
+Pour commencer, écris un algorithme de suivi de ligne vraiment simple, juste pour tester que ton robot fonctionne.
 
-The `gpiozero` module can call a function depending on whether or not a line has been detected. For example:
+Le module `gpiozero` peut appeler une fonction selon si une ligne a été détectée ou non. Par exemple :
 
 ```python
 left_sensor.when_line = function_name_to_call
 left_sensor.when_no_line = other_function_name_to_call
 ```
 
-This will tell the robot to do something when the `left_sensor` detects that it is not above a line. By telling the robot to go forward when no line has been detected, but to turn if a line is detected, you can produce very basic line following behavior.
+Cela dira au robot de faire quelque chose lorsque le `left_sensor` détecte qu'il n'est pas au-dessus d'une ligne. En disant au robot d'avancer quand aucune ligne n'a été détectée, mais de tourner si une ligne est détectée, tu peux produire un comportement de suivi de ligne très basique.
 
 \--- task \---
 
-Add four lines of code to your robot program to produce a basic line following algorithm.
+Ajoute quatre lignes de code à ton programme de robot pour produire un algorithme de suivi de ligne de base.
 
 \--- /task \---
 
 \--- hints \--- \--- hint \---
 
-The lines should perform the following tasks:
+Les lignes doivent effectuer les tâches suivantes :
 
-1. If there's a line under the left sensor, turn left
-2. If there's a line under the right sensor, turn right
-3. If there's no line under the right sensor, drive forwards
-4. If there's no line under the left sensor, drive forwards
+1. S'il y a une ligne sous le capteur de gauche, tourner à gauche
+2. S'il y a une ligne sous le capteur droit, tourner à droite
+3. S'il n'y a pas de ligne sous le capteur droit, avancer
+4. S'il n'y a pas de ligne sous le capteur gauche, avancer
 
 \--- /hint \--- \--- hint \---
 
-The syntax used in the example program is as follows for the first line:
+La syntaxe utilisée dans l'exemple de programme est la suivante pour la première ligne :
 
 ```python
 left_sensor.when_line = robot.left
 ```
 
-Now try to complete the remaining three lines.
+Maintenant, essaie de compléter les trois lignes restantes.
 
 \--- /hint \--- \--- hint \---
 
-Here are the four lines of code you need. If you're running your code from the terminal, you'll need to add `pause()` at the end as well.
+Voici les quatre lignes de code dont tu as besoin. Si tu exécutes ton code à partir du terminal, tu devras également ajouter `pause()` à la fin.
 
 ```python
 left_sensor.when_line = robot.left
@@ -69,6 +69,6 @@ pause()
 
 \--- /hint \--- \--- /hints \---
 
-Don't worry if you're robot tracks off its line a bit. Just observe if it attempts to stay on the line. Here's an example of a robot running on a basic track with this algorithm.
+Ne t’inquiète pas si ton robot quitte un peu sa ligne. Observe simplement s'il tente de rester sur la ligne. Voici un exemple de robot roulant sur une piste de base avec cet algorithme.
 
 ![final](images/final.gif)
