@@ -17,7 +17,7 @@ software: "python"
 site_areas: projects
 steps:
   - title: المقدمة
-  - title: جهز الموصلات
+  - title: تجهيز الموصلات
   - title: وصل حساسات الخط
   - title: أختبر حساسات الخط
   - title: برمج خوارزمية تتبع الخط
