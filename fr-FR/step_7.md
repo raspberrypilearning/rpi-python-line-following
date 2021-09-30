@@ -1,12 +1,12 @@
-## The final algorithm
+## L'algorithme final
 
-Now that you are outputting values that the motors can use, it is time to feed these values in.
+Maintenant que tu sors des valeurs que les moteurs peuvent utiliser, il est temps d'introduire ces valeurs.
 
-To begin with you're going to turn your `while True` loop into a **generator**. A generator is a little like a function, except that it will continually run and only `yield` values when it is asked for them.
+Pour commencer, tu vas transformer ton `while True` en un **générateur**. Un générateur est un peu comme une fonction, sauf qu'il fonctionnera continuellement et qu'il ` donnera` des valeurs seulement quand on lui demandera.
 
 \--- task \---
 
-Turn your loop into a generator like this:
+Transforme ta boucle en un générateur comme ceci :
 
 ```python
 def motor_speed():
@@ -28,11 +28,11 @@ def motor_speed():
 
 \--- /task \---
 
-Now all you need to do is to say that the `source` of the robot's motor values is going to be the result of the generator.
+Maintenant, tout ce que tu as à faire est de dire que la `source` des valeurs du moteur du robot sera le résultat du générateur.
 
 \--- task \---
 
-Add in this line of code below the generator:
+Ajoute dans cette ligne de code sous le générateur :
 
 ```python
 robot.source = motor_speed()
@@ -40,7 +40,7 @@ robot.source = motor_speed()
 
 \--- /task \---
 
-To make sure that the robot doesn't keep running forever, and to close all the components connections cleanly, you can optionally add in these lines as well:
+Pour s'assurer que le robot ne continue pas à rouler indéfiniment, et pour fermer proprement toutes les connexions de composants, tu peux éventuellement ajouter ces lignes aussi :
 
 ```python
 sleep(60)
@@ -53,11 +53,11 @@ right_sensor.close()
 
 \--- task \---
 
-Now run your code and test your robot over a track.
+Exécute maintenant ton code et teste ton robot sur une piste.
 
 \--- /task \---
 
-Sometimes the robot runs a little too fast, so you can tweak your code a bit as shown in the following completed script. This adds in a speed multiplier to slow the robot down a little.
+Parfois, le robot tourne un peu trop vite, donc tu peux modifier ton code un peu comme montré dans le script terminé suivant. Cela ajoute un multiplicateur de vitesse pour ralentir un peu le robot.
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -93,4 +93,4 @@ robot.source = None
 robot.close()
 left_sensor.close()
 right_sensor.close()
-```<video width="640" height="360" controls> <source src="images/showcase.webm" type="video/webm"> Your browser does not support WebM video, so try FireFox or Chrome. </video>
+```<video width="640" height="360" controls> <source src="images/showcase.webm" type="video/webm"> Ton navigateur ne supporte pas la vidéo WebM, alors essaye FireFox ou Chrome. </video>
