@@ -1,10 +1,10 @@
-## Programming a line following algorithm
+## एक लाईनचा अनुसरण करणारा अल्गोरिदमला प्रोग्राम लिहा
 
-**Note:** In this example, the motor controller board is connected so that the left motor is on pins **GPIO 7** and **GPIO 8**, and the right motor is on pins **GPIO 9** and **GPIO 10**. The left line sensor is on pin **GPIO 17**, and the right line sensor is on pin **GPIO 27**.
+**टीप:** या उदाहरणात, मोटर नियंत्रक बोर्ड कनेक्ट केलेला आहे जेणेकरून डावी मोटर पिनवर असेल **GPIO 7** आणि **GPIO 8**, आणि योग्य मोटर **GPIO 9** आणि **GPIO 10** पिनवर आहे. डावीकडील सेन्सर **GPIO 17** पिन वर आहे, आणि उजवीकडील सेन्सर **GPIO 27**पिन आहे.
 
 \--- task \---
 
-Open up **mu** from the Raspberry Pi **Programming** menu, and begin by setting up your motor controller board and your sensors using `gpiozero`:
+Raspberry Pi **प्रोग्रामिंग**मेनू वर **mu**(एक कोड एडिटर) उघडा आणि `gpiozero` वापरुन आपला मोटर नियंत्रक बोर्ड आणि आपले सेन्सर सेट करा:
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -18,45 +18,45 @@ right_sensor= LineSensor(27)
 
 \--- /task \---
 
-To begin with, write a really simple line following algorithm, just to test that your robot is working.
+सुरूवातीस, आपला रोबोट कार्यरत आहे की नाही हे तपासण्यासाठी, अल्गोरिदम अनुसरणानंतर सोपी ओळ लिहा.
 
-The `gpiozero` module can call a function depending on whether or not a line has been detected. For example:
+`gpiozero` मॉड्यूल एखादी ओळ सापडली किंवा नाही यावर अवलंबून फंक्शन कॉल करू शकते. उदाहरणार्थ:
 
 ```python
 left_sensor.when_line = function_name_to_call
 left_sensor.when_no_line = other_function_name_to_call
 ```
 
-This will tell the robot to do something when the `left_sensor` detects that it is not above a line. By telling the robot to go forward when no line has been detected, but to turn if a line is detected, you can produce very basic line following behavior.
+`left_sensor`(डाव्या सेन्सर) रोबोटला काहीतरी करण्यास सांगेल जेव्हा तो रेषा वर नाही हे शोधून काढते. कोणतीही रेषा आढळली नाही तर रोबोटला पुढे जाण्यास सांगते, परंतु जर एखादी रेषा आढळली तर ती वळविण्यासाठी, आपण मूलभूत रेषा तयार करू शकता.
 
 \--- task \---
 
-Add four lines of code to your robot program to produce a basic line following algorithm.
+अल्गोरिदम खालील मूलभूत रेषा तयार करण्यासाठी आपल्या रोबोट प्रोग्राममध्ये code च्या चार ओळी जोडा.
 
 \--- /task \---
 
 \--- hints \--- \--- hint \---
 
-The lines should perform the following tasks:
+ओळींनी पुढील कार्ये केली पाहिजेत:
 
-1. If there's a line under the left sensor, turn left
-2. If there's a line under the right sensor, turn right
-3. If there's no line under the right sensor, drive forwards
-4. If there's no line under the left sensor, drive forwards
+1. डाव्या सेन्सरच्या खाली एक रेषा असल्यास डावीकडे वळा
+2. उजवा सेन्सरच्या खाली एक रेषा असल्यास उजविकडे वळा
+3. उजवा सेन्सरच्या खाली एकही रेषा नसल्यास सरळ चालवा
+4. डाव्या सेन्सरच्या खाली एकही रेषा नसल्यास सरळ चालवा
 
 \--- /hint \--- \--- hint \---
 
-The syntax used in the example program is as follows for the first line:
+उदाहरणार्थ प्रोग्राममध्ये वापरलेला syntax पहिल्या ओळीसाठी खालीलप्रमाणे आहेः:
 
 ```python
 left_sensor.when_line = robot.left
 ```
 
-Now try to complete the remaining three lines.
+आता उर्वरित तीन ओळी पूर्ण करण्याचा प्रयत्न करा.
 
 \--- /hint \--- \--- hint \---
 
-Here are the four lines of code you need. If you're running your code from the terminal, you'll need to add `pause()` at the end as well.
+आपल्याला आवश्यक असलेल्या code(कोड) च्या चार ओळी येथे आहेत. जर आपण आपला code टर्मिनलवरुन चालवत असाल तर आपल्याला `pause ()` शेवटी जोडावे लागेल.
 
 ```python
 left_sensor.when_line = robot.left
@@ -69,6 +69,6 @@ pause()
 
 \--- /hint \--- \--- /hints \---
 
-Don't worry if you're robot tracks off its line a bit. Just observe if it attempts to stay on the line. Here's an example of a robot running on a basic track with this algorithm.
+जर रोबोटने थोडीशी रेष सोडला तर काळजी करू नका. हे लाइन वर राहण्याचा प्रयत्न करत आहे, फक्त निरीक्षण करा. या अल्गोरिदमसह मूलभूत ट्रॅकवर चालणार्‍या रोबोटचे एक उदाहरण येथे आहे.
 
-![final](images/final.gif)
+![अंतिम](images/final.gif)
