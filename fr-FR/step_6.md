@@ -1,37 +1,37 @@
-## Plan a better algorithm
+## Élaborer un meilleur algorithme
 
-The previous algorithm might be OK, it can easily be improved upon. Let's see what a better algorithm might look like!
+L'algorithme précédent peut être correct, il peut facilement être amélioré. Voyons à quoi pourrait ressembler un meilleur algorithme !
 
-When a line sensor is above a line, it outputs a `1`. When it's off a line, it outputs a `0`.
+Lorsqu'un capteur de ligne est au-dessus d'une ligne, il donne un `1`. Quand il est hors ligne, il donne un `0`.
 
-The motors work slightly differently though: the robot, whenever it receives a `1` signal to the right motor, drives that motor forwards. When it receives a `-1`, it drives the motor backwards.
+Les moteurs fonctionnent cependant légèrement différemment : le robot, chaque fois qu'il reçoit un signal `1` au bon moteur, fait avancer ce moteur. Lorsqu'il reçoit un `-1`, il fait reculer le moteur.
 
-Let's have a look at an algorithm that takes into account the position of the robot, the states of the lines sensors, and the actions required of the motors.
+Jetons un coup d'œil à un algorithme qui prend en compte la position du robot, les états des capteurs de lignes et les actions requises des moteurs.
 
-1. The robot is perfectly on the line and should drive forwards:
+1. Le robot est parfaitement en ligne et devrait avancer :
     
-    - Both line sensors are off the line and outputting a `0`
-    - Both motors should receive `1` to drive forwards
+    - Les deux capteurs de ligne sont hors ligne et donnent un `0`
+    - Les deux moteurs doivent recevoir `1` pour avancer
 
-2. The robot has drifted left and needs to turn right:
+2. Le robot a dérivé à gauche et a besoin de tourner à droite :
     
-    - The right sensor is on the line and outputting a `1`
-    - The left sensor is off the line and outputting a `0`
-    - The left motor should run backwards and so receive a `-1`
-    - The right motor should run forwards and so receive a `1`
+    - Le capteur droit est sur la ligne et donne un `1`
+    - Le capteur de gauche est hors ligne et donne un `0`
+    - Le moteur gauche devrait tourner en arrière et recevoir donc un `-1`
+    - Le moteur droit doit tourner vers l'avant et recevoir ainsi un `1`
 
-3. The robot has drifted right and needs to turn left:
+3. Le robot a dérivé à droite et a besoin de tourner à gauche :
     
-    - The right sensor is off the line and outputting a `0`
-    - The left sensor is on the line and outputting a `1`
-    - The Left motor should run forwards and so receive a `1`
-    - The right motor should run backwards and so receive a `-1`
+    - Le capteur droit est hors ligne et donne un `0`
+    - Le capteur gauche est sur la ligne et donne un `1`
+    - Le moteur gauche devrait tourner vers l'avant et donc recevoir un `1`
+    - Le moteur droit doit s'exécuter en arrière et recevoir donc un `-1`
 
-How can you make this happen in code? First of all, you'll create an infinite loop to view the sensor values.
+Comment peux-tu faire en sorte que cela se fasse dans le code ? Tout d'abord, tu vas créer une boucle infinie pour voir les valeurs du capteur.
 
 \--- task \---
 
-In a new file, add in the following lines of code and run it. Don't forget to adjust the pin numbers if you've used different GPIO pins.
+Dans un nouveau fichier, ajoute les lignes de code suivantes et exécute-le. N'oublie pas d'ajuster les numéros de broches si tu as utilisé des broches GPIO différentes.
 
 ```python
 from gpiozero import Robot, LineSensor
@@ -47,33 +47,33 @@ while True:
     print(left_detect, right_detect)
 ```
 
-Now move the robot back and forth over the line to see what happens.
+Maintenant, déplace le robot d'avant en arrière sur la ligne pour voir ce qui se passe.
 
 \--- /task \---
 
-Hopefully, you should see the binary output from the sensors.
+Espérons que tu devrais voir la sortie binaire des capteurs.
 
 ![sensor_output](images/sensor_output.gif)
 
-So now that you have the sensor output, you need to alter it a little before you send it to the motors. As per the algorithm above:
+Alors maintenant que tu as la sortie du capteur, tu devras la modifier un peu avant de l'envoyer aux moteurs. Selon l'algorithme ci-dessus :
 
-- If both sensors output `0`, then both motors should receive `1`
-- If the right sensor outputs `1`, then the left motor should receive `-1`
-- If the left sensor outputs `1`, then the right motor should receive `-1`
+- Si les deux capteurs sortent `0`, alors les deux moteurs devraient recevoir `1`
+- Si le capteur de droite donne `1`, alors le moteur de gauche devrait recevoir `-1`
+- Si le capteur gauche donne `1`, alors le moteur droit devrait recevoir `-1`
 
 \--- task \---
 
-Within the `while True` loop, create two new variables called `left_mot` and `right_mot`. These variables should have the same value that you would like the motors to receive. You can simply print out their values within the loop.
+À l'intérieur de la boucle `while True` , crée deux nouvelles variables appelées `left_mot` et `right_mot`. Ces variables doivent avoir la même valeur que celle que tu veux que les moteurs reçoivent. Tu peux simplement imprimer leurs valeurs dans la boucle.
 
 \--- /task \---
 
 \--- hints \--- \--- hint \---
 
-According to the above algorithm, `if left_detect == 0 and right_detect == 0:`, what do you want the values of `left_mot` and `right_mot` to be?
+Selon l'algorithme ci-dessus, `if left_detect == 0 and right_detect == 0:`, que veux-tu que les valeurs de `left_mot` et `right_mot` soient ?
 
 \--- /hint \--- \--- hint \---
 
-Here's the code for the first condition:
+Voici le code de la première condition :
 
     while True:
         left_detect  = int(left_sensor.value)
@@ -83,11 +83,11 @@ Here's the code for the first condition:
             right_mot = 1
     
 
-You need two more `if` statements to handle the sensors being triggered by a line.
+Tu as besoin de deux autres `if` pour gérer les capteurs déclenchés par une ligne.
 
 \--- /hint \--- \--- hint \---
 
-Here's the completed code, with the print statements:
+Voici le code terminé, avec les instructions d'impression :
 
 ```python while True: left_detect = int(left_sensor.value) right_detect = int(right_sensor.value)
 
@@ -109,7 +109,7 @@ Here's the completed code, with the print statements:
 
 \--- task \---
 
-When you are done, run your code and test how it works when you move the robot over the line.
+Quand tu as terminé, exécute ton code et teste comment ça marche quand tu bouges le robot sur la ligne.
 
 ![sensor_output2.gif](images/sensor_output2.gif)
 
