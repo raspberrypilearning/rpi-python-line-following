@@ -2,24 +2,26 @@
 title: एक लाइन-का पालन करने वाला रोबोट बनाये
 hero_image: images/banner.png
 description: अपने रोबोट गाड़ी को अपने आप से एक ट्रैक का पालन कराए
-theme: red #possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+theme: red
 duration: 3
 version: 4.01
 listed: true
 ingredient: false
 copyedit: true
-last_tested: "2018-04-10"
+last_tested: '2018-04-10'
 curriculum: 3, design-0, programming-3, phys-comp-3, manufacture-2, community-0
-interests: "robotics"
-technologies: "electronic-components, raspberry-pi, python"
-hardware: "electronic-components, raspberry-pi"
-software: "python"
+interests: robotics
+technologies: electronic-components, raspberry-pi, python
+hardware: electronic-components, raspberry-pi
+software: python
 site_areas: projects
 steps:
-  - title: परिचय
-  - title: योजक तैयार करें
-  - title: लाइन सेंसर जोड़े
-  - title: लाइन सेंसर की जांच करें
-  - title: लाइन-का पालन करने वाला एक अल्गोरिथम बनाऐं
-  - title: एक बेहतर एल्गोरिदम की योजना बनाएं
-  - title: अंतिम एल्गोरिथ्म
+- title: परिचय
+  completion: engaged
+- title: योजक तैयार करें
+- title: लाइन सेंसर जोड़े
+- title: लाइन सेंसर की जांच करें
+- title: लाइन-का पालन करने वाला एक अल्गोरिथम बनाऐं
+- title: एक बेहतर एल्गोरिदम की योजना बनाएं
+  completion: internal
+- title: अंतिम एल्गोरिथ्म
