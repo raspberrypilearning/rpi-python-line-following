@@ -12,7 +12,7 @@ image: images/image
 
 In addition to your Raspberry Pi buggy, you will need:
 
-- 8 female-to-female or female-to-male jumper leads
+- 8 socket-to-socket or socket-to-pin jumper leads
 - 2 line following sensors
 - Soldering iron and solder
 - Insulating tape
