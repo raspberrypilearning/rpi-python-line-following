@@ -2,24 +2,28 @@
 title: Bouw een lijnvolgende robot
 hero_image: images/banner.png
 description: Laat je robot buggy zelfstandig een spoor volgen
-theme: red #possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+theme: red
 duration: 3
 version: 4.01
 listed: true
 ingredient: false
 copyedit: true
-last_tested: "2018-04-10"
+last_tested: '2018-04-10'
 curriculum: 3, design-0, programming-3, phys-comp-3, manufacture-2, community-0
-interests: "robotics"
-technologies: "electronic-components, raspberry-pi, python"
-hardware: "electronic-components, raspberry-pi"
-software: "python"
+interests: robotics
+technologies: electronic-components, raspberry-pi, python
+hardware: electronic-components, raspberry-pi
+software: python
 site_areas: projects
 steps:
-  - title: Inleiding
-  - title: Bereid de connectoren voor
-  - title: Sluit de lijnsensoren aan
-  - title: Test de lijnsensoren
-  - title: Programmeer een lijnvolg-algoritme
-  - title: Plan een beter algoritme
-  - title: Het laatste algoritme
+- title: Inleiding
+- title: Bereid de connectoren voor
+- title: Sluit de lijnsensoren aan
+  completion:
+  - engaged
+- title: Test de lijnsensoren
+- title: Programmeer een lijnvolg-algoritme
+- title: Plan een beter algoritme
+- title: Het laatste algoritme
+  completion:
+  - internal

@@ -8,18 +8,22 @@ version: 4
 listed: true
 ingredient: false
 copyedit: true
-last_tested: "2018-04-10"
+last_tested: '2018-04-10'
 curriculum: 3, design-0, programming-3, phys-comp-3, manufacture-2, community-0
-interests: "robotics"
-technologies: "electronic-components, raspberry-pi, python"
-hardware: "electronic-components, raspberry-pi"
-software: "python"
+interests: robotics
+technologies: electronic-components, raspberry-pi, python
+hardware: electronic-components, raspberry-pi
+software: python
 site_areas: projects
 steps:
-  - title: Εισαγωγή
-  - title: Ετοίμασε τις συνδέσεις
-  - title: Σύνδεσε τους αισθητήρες γραμμής
-  - title: Έλεγξε τους αισθητήρες γραμμής
-  - title: Γράψε έναν αλγόριθμο για να ακολουθεί το ρομπότ τη γραμμή
-  - title: Σχεδίασε έναν καλύτερο αλγόριθμο
-  - title: Ο τελικός αλγόριθμος
+- title: Εισαγωγή
+- title: Ετοίμασε τις συνδέσεις
+- title: Σύνδεσε τους αισθητήρες γραμμής
+  completion:
+  - engaged
+- title: Έλεγξε τους αισθητήρες γραμμής
+- title: Γράψε έναν αλγόριθμο για να ακολουθεί το ρομπότ τη γραμμή
+- title: Σχεδίασε έναν καλύτερο αλγόριθμο
+- title: Ο τελικός αλγόριθμος
+  completion:
+  - internal

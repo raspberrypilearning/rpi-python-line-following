@@ -2,31 +2,28 @@
 title: ಒಂದು ಲೈನ್ ಅನುಸರಿಸುವ ರೋಬೋಟ್ ತಯಾರಿಸಿ
 hero_image: images/banner.png
 description: ನಿಮ್ಮ ರೊಬೋಟ್ ಅನ್ನು ಸ್ವತಃ ಟ್ರ್ಯಾಕ್ ಅನುಸರಿಸುವಂತೆ ಮಾಡಿ
-theme: red #possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+theme: red
 duration: 3
 version: 4.01
 listed: true
 ingredient: false
 copyedit: true
-last_tested: "2018-04-10"
+last_tested: '2018-04-10'
 curriculum: 3, design-0, programming-3, phys-comp-3, manufacture-2, community-0
-interests: "robotics"
-technologies: "electronic-components, raspberry-pi, python"
-hardware: "electronic-components, raspberry-pi"
-software: "python"
+interests: robotics
+technologies: electronic-components, raspberry-pi, python
+hardware: electronic-components, raspberry-pi
+software: python
 site_areas: projects
 steps:
-  - 
-    title: ಪರಿಚಯ
-  - 
-    title: ಕನೆಕ್ಟರ್‌ಗಳನ್ನು ತಯಾರಿಸಿ
-  - 
-    title: ಲೈನ್ ಸೆನ್ಸರ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿ
-  - 
-    title: ಲೈನ್ ಸೆನ್ಸರ್‌ಗಳನ್ನು ಪರೀಕ್ಷಿಸಿ
-  - 
-    title: ಲೈನ್ ಅನುಸರಿಸುವ ಒಂದು ಅಲ್ಗಾರಿತಮ್ ಮಾಡಿ
-  - 
-    title: ಉತ್ತಮ ಅಲ್ಗಾರಿದಮ್ ಅನ್ನು ಯೋಜಿಸಿ
-  - 
-    title: ಅಂತಿಮ ಅಲ್ಗಾರಿದಮ್
+- title: ಪರಿಚಯ
+- title: ಕನೆಕ್ಟರ್‌ಗಳನ್ನು ತಯಾರಿಸಿ
+- title: ಲೈನ್ ಸೆನ್ಸರ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿ
+  completion:
+  - engaged
+- title: ಲೈನ್ ಸೆನ್ಸರ್‌ಗಳನ್ನು ಪರೀಕ್ಷಿಸಿ
+- title: ಲೈನ್ ಅನುಸರಿಸುವ ಒಂದು ಅಲ್ಗಾರಿತಮ್ ಮಾಡಿ
+- title: ಉತ್ತಮ ಅಲ್ಗಾರಿದಮ್ ಅನ್ನು ಯೋಜಿಸಿ
+- title: ಅಂತಿಮ ಅಲ್ಗಾರಿದಮ್
+  completion:
+  - internal
