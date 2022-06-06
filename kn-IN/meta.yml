@@ -17,11 +17,13 @@ software: python
 site_areas: projects
 steps:
 - title: ಪರಿಚಯ
-  completion: engaged
 - title: ಕನೆಕ್ಟರ್‌ಗಳನ್ನು ತಯಾರಿಸಿ
 - title: ಲೈನ್ ಸೆನ್ಸರ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿ
+  completion:
+  - engaged
 - title: ಲೈನ್ ಸೆನ್ಸರ್‌ಗಳನ್ನು ಪರೀಕ್ಷಿಸಿ
 - title: ಲೈನ್ ಅನುಸರಿಸುವ ಒಂದು ಅಲ್ಗಾರಿತಮ್ ಮಾಡಿ
 - title: ಉತ್ತಮ ಅಲ್ಗಾರಿದಮ್ ಅನ್ನು ಯೋಜಿಸಿ
-  completion: internal
 - title: ಅಂತಿಮ ಅಲ್ಗಾರಿದಮ್
+  completion:
+  - internal

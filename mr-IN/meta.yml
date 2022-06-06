@@ -17,11 +17,13 @@ software: python
 site_areas: projects
 steps:
 - title: परिचय
-  completion: engaged
 - title: काँनेक्टर्स तयार करा
 - title: लाइन सेन्सरला कनेक्ट करा
+  completion:
+  - engaged
 - title: लाईन्स सेन्सरची चाचणी घ्या
 - title: एक लाईनला अनुसरण करणारा अल्गोरिदमला प्रोग्राम करा
 - title: चांगल्या अल्गोरिदमची योजना करा
-  completion: internal
 - title: अंतिम अल्गोरिदम
+  completion:
+  - internal

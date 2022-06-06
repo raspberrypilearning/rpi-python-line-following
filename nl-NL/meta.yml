@@ -17,11 +17,13 @@ software: python
 site_areas: projects
 steps:
 - title: Inleiding
-  completion: engaged
 - title: Bereid de connectoren voor
 - title: Sluit de lijnsensoren aan
+  completion:
+  - engaged
 - title: Test de lijnsensoren
 - title: Programmeer een lijnvolg-algoritme
 - title: Plan een beter algoritme
-  completion: internal
 - title: Het laatste algoritme
+  completion:
+  - internal

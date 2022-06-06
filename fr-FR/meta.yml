@@ -17,11 +17,13 @@ software: python
 site_areas: projects
 steps:
 - title: Introduction
-  completion: engaged
 - title: Préparer les connecteurs
 - title: Connecter les capteurs de ligne
+  completion:
+  - engaged
 - title: Tester les capteurs de lignes
 - title: Programmer un algorithme de suivi de ligne
 - title: Élaborer un meilleur algorithme
-  completion: internal
 - title: L'algorithme final
+  completion:
+  - internal

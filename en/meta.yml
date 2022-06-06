@@ -17,11 +17,13 @@ software: python
 site_areas: projects
 steps:
 - title: Introduction
-  completion: engaged
 - title: Prepare the connectors
 - title: Connect the line sensors
+  completion:
+  - engaged
 - title: Test the lines sensors
 - title: Program a line following algorithm
 - title: Plan a better algorithm
-  completion: internal
 - title: The final algorithm
+  completion:
+  - internal

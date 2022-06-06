@@ -17,11 +17,13 @@ software: python
 site_areas: projects
 steps:
 - title: المقدمة
-  completion: engaged
 - title: تجهيز الموصلات
 - title: وصل حساسات الخط
+  completion:
+  - engaged
 - title: أختبر حساسات الخط
 - title: برمج خوارزمية تتبع الخط
 - title: خطط لخوارزمية أفضل
-  completion: internal
 - title: الخوارزمية النهائية
+  completion:
+  - internal

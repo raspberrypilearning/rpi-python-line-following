@@ -17,11 +17,13 @@ software: python
 site_areas: projects
 steps:
 - title: Εισαγωγή
-  completion: engaged
 - title: Ετοίμασε τις συνδέσεις
 - title: Σύνδεσε τους αισθητήρες γραμμής
+  completion:
+  - engaged
 - title: Έλεγξε τους αισθητήρες γραμμής
 - title: Γράψε έναν αλγόριθμο για να ακολουθεί το ρομπότ τη γραμμή
 - title: Σχεδίασε έναν καλύτερο αλγόριθμο
-  completion: internal
 - title: Ο τελικός αλγόριθμος
+  completion:
+  - internal
