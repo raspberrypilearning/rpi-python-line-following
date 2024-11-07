@@ -22,7 +22,6 @@ right_sensor= LineSensor(27)
 
 --- /code ---
 
-
 --- /task ---
 
 Underneath, write a simple line following program to test your robot.
@@ -53,6 +52,7 @@ pause()
 
 --- /code ---
 
+--- /task ---
 
 Don't worry if your robot tracks off its line. Just check it attempts to stay on the line.
 
