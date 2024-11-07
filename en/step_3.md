@@ -22,7 +22,7 @@ Take the second of your soldered jumper leads, and connect two ends to the **GND
 
 --- task ---
 
-Take your remaining two single jumper leads and connect each one to the **DO** pin on each line sensors.
+Take your remaining two single jumper leads and connect each one to the **DO** pin on each line sensor.
 
 ![digital out](images/digital_out.jpg)
 
