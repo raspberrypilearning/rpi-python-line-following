@@ -26,7 +26,7 @@ steps:
 - title: A better line follower
   completion:
   - internal
-- title: The final algorithm
+- title: The final follower
   completion:
   - external
 - title: What next?
