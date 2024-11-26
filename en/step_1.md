@@ -23,7 +23,7 @@ title: Additional information for educators
 
 If you need to print this project, please use the [printer-friendly version](https://projects.raspberrypi.org/en/projects/rpi-python-line-following/print){:target="_blank"}.
 
-Use the link in the footer to access the GitHub repository for this project, which contains all resources (including an example finished project) in the 'en/resources' folder.
+Access [all resources](https://rpf.io/p/en/rpi-python-line-following-go) - including an example finished project.
 
 --- /collapse ---
 

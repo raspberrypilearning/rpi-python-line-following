@@ -8,7 +8,7 @@ Normally, the type of line sensor used in this project needs to be connected to 
 
 - Take three of your socket-to-socket jumper leads, remove a connector from each end, and then strip the plastic sheath to reveal about a centimeter of the multi-core wire beneath.
 
-![Three red jumper leads with their plastic sheath stripped at the top](images/stripped.jpg)
+![Three red jumper leads with their plastic sheath stripped at the top](images/stripped.jpg){:width="400px"}
 
 --- /task ---
 
@@ -16,7 +16,7 @@ Normally, the type of line sensor used in this project needs to be connected to 
 
 - Take the three jumper leads and twist their multi-core wires together. Then use a soldering iron to bond the leads.
 
-![Animation showing the three red jumper leads being soldered together](images/solder.gif)
+![Animation showing the three red jumper leads being soldered together](images/solder.gif){:width="400px"}
 
 --- /task ---
 
@@ -24,7 +24,7 @@ Normally, the type of line sensor used in this project needs to be connected to 
 
 Cover the join of the leads with a small amount of insulating tape.
 
-![Three red jumper leads soldered together with masking tape covering the soldered bond](images/soldered.jpg)
+![Three red jumper leads soldered together with masking tape covering the soldered bond](images/soldered.jpg){:width="400px"}
 
 --- /task ---
 
