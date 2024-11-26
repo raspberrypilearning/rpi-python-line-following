@@ -16,14 +16,17 @@ hardware: electronic-components, raspberry-pi
 software: python
 site_areas: projects
 steps:
-- title: Introduction
+- title: What you will make
 - title: Prepare the connectors
 - title: Connect the line sensors
   completion:
   - engaged
 - title: Test the lines sensors
-- title: Program a line following algorithm
-- title: Plan a better algorithm
-- title: The final algorithm
+- title: Simple line follower
+- title: A better line follower
   completion:
   - internal
+- title: The final follower
+  completion:
+  - external
+- title: What can you do now?

@@ -1,6 +1,6 @@
 ## Test the line sensors
 
-Next you're going to test whether your line sensors are working, and you'll tune them a little.
+Next you're going to test whether your line sensors are working, and tune them.
 
 --- task ---
 
@@ -16,16 +16,20 @@ Cut two small holes in the bottom of your buggy so that the sensor can view the 
 
 --- /task ---
 
-When the sensors pass over a dark line, the LED on the sensor board should turn off.
+--- task ---
+
+Pass the sensors over a dark line. 
+
+The LED on the sensor board should turn off.
 
 ![tune](images/tune.gif)
 
+--- /task ---
+
 --- task ---
 
-Use the small potentiometer on the board to tune your sensors, so that the LEDs turns off when over a dark line, and lights up when over white space.
+Use the small potentiometer on the board to tune your sensors, so that the LEDs turns off when over a dark line, and light up when over white space.
 
 ![tune](images/tune.jpg)
 
 --- /task ---
-
-Once you have tuned the sensors, you can proceed to programming your robot.
