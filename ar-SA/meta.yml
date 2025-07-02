@@ -24,6 +24,5 @@ steps:
 - title: أختبر حساسات الخط
 - title: برمج خوارزمية تتبع الخط
 - title: خطط لخوارزمية أفضل
-- title: الخوارزمية النهائية
   completion:
   - internal

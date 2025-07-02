@@ -24,6 +24,5 @@ steps:
 - title: Test de lijnsensoren
 - title: Programmeer een lijnvolg-algoritme
 - title: Plan een beter algoritme
-- title: Het laatste algoritme
   completion:
   - internal
