@@ -24,6 +24,5 @@ steps:
 - title: Tester les capteurs de lignes
 - title: Programmer un algorithme de suivi de ligne
 - title: Élaborer un meilleur algorithme
-- title: L'algorithme final
   completion:
   - internal
